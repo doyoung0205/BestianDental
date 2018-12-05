@@ -1,7 +1,7 @@
 /Tool/
 m2e-wtp
 !.mvn/wrapper/maven-wrapper.jar
-
+/classes/
 
 # Compiled class file
 *.class

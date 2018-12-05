@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+#a1{
+	background-color: red;
+	width: 100px;
+	height: 100px;
+}
+
+
+#a2{
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+}
+
+#a3{
+	background-color: yellow;
+	width: 100px;
+	height: 100px;
+} 
+
+.container div{ 
+	display: inline-block;
+}
+
+/* .container div:nth-child(3){
+	float: left;
+} */
+
+.container {
+	margin: 0 auto;
+	width: 1200PX;
+	
+}
+
+.wrap {
+	width: 100%;
+}
+
+
+.left {
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.div_Absolute{
+	position: relative;
+}
+.div_Absolute div{
+	position: absolute;
+}
+.div_Absolute div:nth-child(2){
+	left: 10;
+}
+.div_Absolute div:nth-child(3){
+	left: 20;
+}
+
+
+.wrap:before {
+	display: block;
+	content: "";
+	clear: both;
+}

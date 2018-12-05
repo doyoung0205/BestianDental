@@ -4,76 +4,70 @@
 
 <div layout:fragment="content">
 
-	<div class="panel-heading">TEST</div>
-	
-	<div class="panel-body pull-right">
-	<h3><a class="label label-default " th:href="@{register}">Register</a></h3>
-	</div>
-	
-	<div class="panel-body"> 
-		<div th:with="result=${result.result}">
- 
-			<table class="table table-striped table-bordered table-hover"
-				id="dataTables-example">
-				<thead> 
-					<tr>
-						<th>BNO</th>
-						<th>TITLE</th>
-						<th>WRITER</th>
-						<th>REGDATE</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="odd gradeX" th:each="arr:${result.content}">
-						<td>[[${arr[0]}]]</td>
-						<td>
-						  <a th:href='${arr[0]}' class='boardLink'>[[${arr[1]}]]</a>
-						  <span class="badge">[[${arr[3]}]]</span>
-						</td>
-						<td>[[${arr[2]}]]</td>
-						<td class="center">[[${#dates.format(arr[4],
-							'yyyy-MM-dd')}]]</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<div>
-				<select id='searchType'>
-					<option>--</option>
-					<option value='t' th:selected="${pageVO.type} =='t'" >Title</option>
-					<option value='c' th:selected="${pageVO.type} =='c'">Content</option>
-					<option value='w' th:selected="${pageVO.type} =='w'">Writer</option>
-				</select>
-			  <input type='text' id='searchKeyword' th:value="${pageVO.keyword}">
-			  <button id='searchBtn'>Search</button> 
+<section id ="mainVisual">
+	<ul class ="visual_wrap"> 
+		<!-- 이미지가 들어가는 태그 --> 
+		<li style="background-image: url(/img/main/main.png);" > 
+			<div class ="visual_img title">  
+				<div class ="imageWrap"><img alt="" src="/img/main/title.png"></div>
 			</div>
+			
+			<div class ="visual_img sub">
+				<div class =imageWrap><img alt="" src="/img/main/sub.png"></div>
+			</div>
+			
+			<div class ="visual_img text">
+				<div class ="imageWrap"><img alt="" src="/img/main/text.png"></div>
+			</div>
+		</li>
+		
+	</ul>
 
+	<!-- 케러셀 버튼 -->
+	<div id="navBtn">
+			<button type="button" class="prev">prev btn</button>
+			<button type="button" class="next">next btn</button>
+	</div>
+			
+	<!-- 케러셀 dot -->
+	<ul id="indiBtn">
+	     <li><button type="button" class="active">1</button></li> 
+		 <li><button type="button">2</button></li>
+		 <li><button type="button">3</button></li>
+		 <li><button type="button">4</button></li>
+	</ul>
+	<!-- 캐러셀 end -->
+
+
+</section>
+<section>
+	<div class ="mainVisual-footer">
+		<div class ="leftBox">
+				<div class ="content">
+					<div  class ="cacaoLine-Box"><span>카카오톡 상담</span><img alt="" src="/img/main/kakao.png"></div>
+					<div><h1>BESTIANSEOUL</h1></div>
+				</div>
 		</div>
-
-		<nav>
-
-			<div>
-
-				<ul class="pagination">
-					<li class="page-item" th:if="${result.prevPage}"><a
-						th:href="${result.prevPage.pageNumber} + 1">PREV
-							[[${result.prevPage.pageNumber} + 1]]</a></li>
-
-					<li class="page-item"
-						th:classappend="${p.pageNumber == result.currentPageNum -1}?active: '' "
-						th:each="p:${result.pageList}"><a
-						th:href="${p.pageNumber} +1">[[${p.pageNumber} +1]]</a></li>
-
-					<li class="page-item" th:if="${result.nextPage}"><a
-						th:href="${result.nextPage.pageNumber} + 1">NEXT
-							[[${result.nextPage.pageNumber} + 1]]</a></li>
-				</ul>
+	
+		<div class ="rightBox">
+		
+			<div class ="semiBox">
+				<div class ="semiTitle"><h3>| Before</h3></div>
+				<div class ="semiContent">
+					<div class ="imageWrap"><img alt="" src="/img/main/before.png"></div>
+				</div>
 			</div>
-		</nav>
-
-
-	</div>
-
+			
+			<div class ="semiBox after">
+				<div class ="semiTitle"><h3>| After</h3><span class="more">더보기 <img alt="" src="/img/main/ic_add_box_24px.png"> </span></div>
+				<div class ="semiContent">
+					<div class ="imageWrap"><img alt="" src="/img/main/after.png"></div>
+				</div>
+			</div>
+		</div>
+	
+	</div>		
+</section>
 
 </div>
 <!--  end fragment -->
@@ -81,8 +75,53 @@
 <th:block layout:fragment="script">
 
 	<script th:inline="javascript">
-	
+/* function main(){
+    //mainVisual
+    var $mainVisual = $("#mainVisual");
+    var $visualWrap = $mainVisual.find(".visual_wrap"),
+        $visualWrapLi = $visualWrap.find("li"),
+        _visualLength = $visualWrapLi.length;
+    
+    var $navBtn = $mainVisual.find("#navBtn"),
+        $prevBtn = $navBtn.find(".prev"),
+        $nextBtn = $navBtn.find(".next");
+    
+    var $indiBtn = $mainVisual.find("#indiBtn");
+    TweenMax.staggerTo($visualWrapLi.eq(0).find("h3,p,a"), .3, {y: 0, opacity: 1, ease: es_step}, .2);
+    var visualCrr = {};
+    Object.defineProperty(visualCrr, 'number', {
+        get: function () {
+            return this.num || 0;
+        },
+        set: function (_visualCrr) {
+            _visualCrr = _visualCrr % _visualLength;
+            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step});
+            TweenMax.to($visualWrapLi.find("h3,p,a"), .5, {y: 30, opacity: 0, ease: es_step});
+            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
+            TweenMax.staggerTo($visualWrapLi.eq(_visualCrr).find("h3,p,a"), 1, {y: 0, opacity: 1, ease: es_step}, .2);
+
+            $indiBtn.find("li button").removeClass("active");
+            $indiBtn.find("li").eq(_visualCrr).find("button").addClass("active");
+            this.num = _visualCrr;
+        }
+    });
+    $nextBtn.click(function () {
+        visualCrr.number++;
+    });
+    $prevBtn.click(function () {
+        visualCrr.number--;
+    });
+    $indiBtn.find("button").click(function () {
+        var _this = $(this);
+        var _visualCrr = _this.parent().index();
+
+        visualCrr.number = _visualCrr;
+    });
+}	
+ */
+
 		
 	</script>
 
 </th:block>
+</html>

@@ -13,13 +13,15 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
   <link rel="stylesheet" th:href="@{/css/normalize.css}">
   <link rel="stylesheet" th:href="@{/css/main.css}">
+  <link rel="stylesheet" th:href="@{/css/footer.css}">
+  <link rel="stylesheet" th:href="@{/css/header.css}">
 </head>
 
 <body>
 	
 			<div th:insert="~{fragments/header::header}"></div>
 			
-			<div class ="panel panel-default" layout:fragment="content">
+			<div layout:fragment="content">
 			
 			</div>
 			

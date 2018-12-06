@@ -329,8 +329,9 @@ blockquote:before, blockquote:after,q:before, q:after {
 
 #mainVisual {
     position: relative;
-     overflow: hidden;
+    overflow: hidden;
     height: 585px;
+    width: 100%;
 }
 
 
@@ -344,7 +345,7 @@ blockquote:before, blockquote:after,q:before, q:after {
 #mainVisual .visual_wrap li{
 	width: 100%;
     height: 585px;
-    min-width: 1180px;
+    /* min-width: 1180px; */
     position: absolute;
     top: 0;
     display: none;
@@ -370,14 +371,21 @@ blockquote:before, blockquote:after,q:before, q:after {
 
     
 .visual_img.title{
-	top: 15%;
-	left: 0px;
+	top: 8%;
+	left: -26px;
+}
+
+.visual_img.title .imageWrap:first-child{
+	display: table-cell !important;
+}
+.visual_img.title .imageWrap:last-child{
+	display: none !important;
 }
 .visual_img.sub{
-	top: 40%;
-	left: 26%;
+	top: 76%;
+	right: 53px;
 }
-.visual_img.text{
+.visual_imgWrap.text .imageWrap{
 	bottom: 5%;
 	right: 0;
 }
@@ -392,7 +400,7 @@ blockquote:before, blockquote:after,q:before, q:after {
 }
 
 .leftBox {
-    width: 40%;
+    width: 42%;
     /* padding-top: 20px; */
     /* padding-right: 20px; */
     color: #ffffff;
@@ -400,16 +408,16 @@ blockquote:before, blockquote:after,q:before, q:after {
 }
 
 .rightBox {
-    background-color: #414456;
-    width: 60%;
+    background-color: #404355;
+    width: 58%;
     padding: 35px 0 0 55px;
     color: white;
 }
 
 .mainVisual-footer>div {
-    float: left;
+    float: right;
     /* height: 100%; */
-    min-height: 260px;
+    min-height: 275px;
 }
 
 .semiBox {
@@ -428,6 +436,8 @@ blockquote:before, blockquote:after,q:before, q:after {
 
 span.more {
     float: right;
+    cursor: pointer;
+    margin-top: 3px;
 }
 
 .leftBox {}
@@ -441,10 +451,420 @@ span.more {
     font-weight: bold;
 }
 
-
 .leftBox .content {
     float: right;
     display: block;
-    margin: 4% 14% 0 0;
+    margin: 45px 14% 0 0;
 }
+
+.content {}
+
+.leftBox .content h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.semiBox.after  {
+    margin-left: -1px;
+}
+
+.semiTitle {
+    overflow: hidden;
+    margin-bottom: 15px;
+    /* font-weight: bold; */
+    padding-left: 12px;
+}
+
+.semiBox.after .semiTitle h3 {
+    color: #f45858;
+}
+
+.semiBox .semiTitle h3 {
+    font-weight: bold;
+}
+
+span.more img {
+    margin-bottom: 3px;
+    padding-left: 5px;
+}
+
+
+
+.semiBox .semiTitle {
+    border-left: 2.5px solid #fcfcff;
+}
+
+.semiBox.after .semiTitle {
+    border-color: #f45858;
+}
+
+.semiContent {
+    position: relative;
+}
+.semiBox.after .semiContent.active::after {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.semiBox.after .semiContent::after {
+	background: #f45858;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+}
+
+.semiContent::after {
+    content: '';
+    width: 100%;
+    height: 6px;
+    z-index: 20;
+    background: #88848f;
+    position: absolute;
+    bottom: 0;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+
+.visual_imgWrap {
+    height: 181px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: table;
+    z-index: 10;
+    bottom: 11%;
+    right: 0;
+    text-align: center;
+}
+ 
+.visual_imgWrap.text .visual_img {
+    right: 0;
+}
+
+.semiBoxWrap {
+    overflow: hidden;
+}
+
+leftTap::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.leftTap {
+    overflow: hidden;
+    height: 300px;
+    position: absolute;
+    width: 870px;
+}
+
+
+
+.visual_wrap .list1{
+	background-image: url(/img/main/main.png);
+}
+.visual_wrap .list2{
+	background-image: url(/img/main/main.png);
+}
+.visual_wrap .list3{
+	background-image: url(/img/main/main.png);
+}
+
+
+.target{
+	-webkit-transform: translate(0, 30px);
+	    -moz-transform: translate(0, 30px);
+	    -ms-transform: translate(0, 30px);
+	    -o-transform: translate(0, 30px);
+	    transform: translate(0, 30px);
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+}
+
+.imageWrap img ,.mainImage img{
+    width: 100%;
+    height: auto;
+}
+      
+label, button {
+    cursor: pointer;
+}      
+
+select, input, button, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: 0 none;
+    font-size: 17px;
+    font-weight: 300;
+}
+      
+/* 캐러셀 버튼 */
+#mainVisual #indiBtn button.active {
+    background-color: #f45858;
+}
+ 
+#mainVisual #indiBtn button {
+    width: 45px;
+    height: 10px;
+    background-color: #fff;
+    text-indent: -9999px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+}      
+
+#mainVisual #indiBtn {
+    width: 100%;
+    position: absolute;
+    left: 20%;
+    bottom: 35%;
+    z-index: 20;
+}
+      
+#mainVisual #indiBtn li {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.cacaoLine {
+	display: none;
+}
+
+
+/* 반응형 */
+
+@media screen and (max-width:1280px) {
+	
+	.visual_wrap .list1{
+		background-image: url(/img/main/main_m.png);
+	}
+
+
+	.visual_img.title img{
+		width: 550px;
+	}
+	.leftTap{
+		width: 550px;		
+	} 
+	
+	div.visual_img.title {
+	    top: 26%;
+	    left: 0px;
+	} 
+	
+	div.visual_img.sub {
+    top: 64%;
+    right: 0;
+}
+
+	
+
+	div.visual_imgWrap.text{
+		display: none;
+	}
+	
+	div.mainVisual-footer>div{
+		width: 100%
+	}
+	
+	div.mainVisual-footer>div div.content{
+		    float: none;
+		    width: 100%;
+		    vertical-align: middle;
+		    text-align: center;
+	}
+	
+	.semiBoxWrap {
+	
+	}
+	div.rightBox{
+		padding:inherit;
+		position: relative;
+	}
+	div.rightBox .semiBoxWrap{
+	display: block;
+	position: absolute;
+	left: calc(50% - 316px);
+	width: 642px;
+	top: 40px;
+	}
+	
+	#mainVisual{
+		height: 385px;
+	}
+	#mainVisual .visual_wrap li{
+		width:100%;
+		height: 385px
+	}
+	
+	#mainVisual #indiBtn {
+	    bottom: 17%;
+	}
+	
+	/* 카카오라인 */
+	div.leftBox{
+		display: none;
+	}
+	
+	div.cacaoLine {
+		display: block;
+		background-color: #091931;
+		color: white;
+		min-height: 135px;
+	}
+	
+	div.cacaoLine span {
+	    color: #ffe600;
+	    font-weight: bold;
+	}
+		
+	.cacaoLine .content h1 b {
+	    margin: 0 126px 0 126px;
+	}	      
+}
+
+
+@media screen and (max-width:1080px) {
+	
+	.visual_wrap .list1{
+		background-image: url(/img/main/main_sss.png);
+	}
+	
+	.visual_img.title img{
+		width: 450px;
+	}
+	.leftTap{
+		width: 450px;		
+	}
+	
+	div.visual_img.sub {
+	    top: 57%;
+	    right: 0;
+	}
+		
+	#mainVisual #indiBtn {
+	    left: 15%;
+	    bottom: 3%;
+	}
+	
+
+}
+
+@media screen and (max-width:1015px) {
+
+	#mainVisual{
+		height: 285px; 
+	}
+	
+	#mainVisual .visual_wrap li{
+		height: 285px
+	} 
+	
+	
+	
+}
+
+
+
+@media screen and (max-width:942px) {
+			
+	.cacaoLine .content h1 b {
+	    margin: 0 75px 0 60px;
+	}
+}
+
+@media screen and (max-width:815px) {
+
+	.visual_img.title .imageWrap:first-child{
+		display: none !important; 
+	}
+	.visual_img.title .imageWrap:last-child{
+		display: table-cell !important;
+	}
+		.visual_wrap .list1{
+		background-image: url(/img/main/main_4.png);
+	}
+	
+	
+	
+	.visual_img.title img{
+		width: 300px;
+	}
+	.leftTap{
+		width: 300px;		
+	}
+		
+	div.visual_img.sub {
+	    top: 50%;
+	    left: 0;
+	    margin-left: 20px;
+	}
+	
+	div.visual_img.title {
+	    top: 20%;
+	    left: 0;
+	} 
+
+	div.rightBox .semiBoxWrap {
+    display: block;
+    position: absolute;
+    left: calc(50% - 168px);
+    width: 320px;
+    top: 40px;
+}
+	.mainVisual-footer div.rightBox{
+		min-height: 475px;
+	}
+	
+	.semiBox.after {
+	    margin-left: 0;
+	    margin-top: 30px;
+	}	
+			
+				
+	.cacaoLine .content h1 b {
+  		  margin: 0 25px;
+	}
+} 
+@media screen and (max-width:695px) {
+	.cacaoLine{
+ 		  display: none !important;
+	}
+	.leftBox{
+		display: block !important;
+	}
+}
+
+@media screen and (max-width:615px) {
+
+	.visual_img.title img{
+		width: 250px;
+	}
+	.leftTap{
+		width: 250px;		
+	}
+	
+	
+} 
+
+
 

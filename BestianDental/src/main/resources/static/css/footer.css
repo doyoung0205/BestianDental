@@ -1,0 +1,11 @@
+#footer {
+    width: 100%;
+    clear: both;
+}
+.wrap {
+    width: 990px;
+    margin: 0 auto;
+}
+.xm_left {
+    float: left;
+}

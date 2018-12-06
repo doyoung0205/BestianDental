@@ -1,6 +1,143 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <div th:fragment="header">
-	헤더 파일입니다.
+<div class="top_wrapper">
+	<div class="wrap">
+		<div class="xm_right">
+			<ul class="top_ul">
+								<!-- 로그인 이전 -->
+				<li style="width:40px;text-align:center;padding-top:12px;"><a href="./bbs/login.php?url=%2Fnew%2F" alt="로그인"><img src="http://www.yangak.com/new/img/top/login.jpg" alt="로그인"></a></li>
+				<li>l</li>
+				<li style="width:40px;text-align:center;padding-top:12px;padding-right:0px;"><a href="./bbs/register.php" alt="회원가입"><img src="http://www.yangak.com/new/img/top/join.jpg" alt="회원가입"></a></li>
+				<li>l</li>
+				<li style="width:60px;text-align:center;padding-top:12px;padding-right:10px;"><a href="/new/adm/" alt="관리자화면"><img src="http://www.yangak.com/new/img/top/admin_btnn.jpg" alt="관리자화면"></a>&nbsp;</li>
+								<form id="search" action="http://www.yangak.com/new/bbs/board.php" method="get">
+				<input type="hidden" name="bo_table" value="hugi">
+				<input type="hidden" name="sfl" value="wr_subject||wr_content">
+
+				<li style="border-left:1px solid #ececec;width:160px;height:40px;text-align:right;padding-top:5px;"><input type="text" name="stx" style="text-decoration: none;" value="" title="검색어 입력"></li>
+				<li style="width:30px;height:40px;text-align:right; padding-top:5px;"><input type="image" src="http://www.yangak.com/new/img/top/search.jpg" name="submit_btn" style="float:right;border:0;cursor:pointer" value=""></li> 
+				</form>
+				
+				<!-- //검색 영역 -->
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div id="header">
+	<div class="wrap" id="top_menu">
+	<div style="width:990px;float:left;">
+			
+		
+<div><a href="http://www.yangak.com/new" class="xm_left logo"><img src="http://www.yangak.com/new/img/top/logo_new.jpg"></a></div>
+		
+		<div class="xm_left" style="padding-bottom:26px;padding-left:0px;">
+			
+			<ul class="gnb" style="text-align:left;padding-left:5px;padding-top:5px;">
+		
+
+	
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb1">
+				<a href="http://www.yangak.com/new/intro" title="베스티안 치과"><img src="http://www.yangak.com/new/img/top/submenu_00.jpg"></a>
+
+				<div id="" class="gnb_sub1">
+					<ul class="gnb_sub1" style="display:none;">
+				<li><a href="http://www.yangak.com/new/intro/index.php"><img src="http://www.yangak.com/new/img/gnb/intro_01.jpg" id="intro_01" onmouseover="mouseOver('intro_01')" onmouseout="mouseOut('intro_01')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/intro/index1.php"><img src="http://www.yangak.com/new/img/gnb/intro_02.jpg" id="intro_02" onmouseover="mouseOver('intro_02')" onmouseout="mouseOut('intro_02')" style="  float:left;"></a></li>			
+				<li><a href="http://www.yangak.com/new/intro/index2.php"><img src="http://www.yangak.com/new/img/gnb/intro_03.jpg" id="intro_03" onmouseover="mouseOver('intro_03')" onmouseout="mouseOut('intro_03')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/intro/index3.php"><img src="http://www.yangak.com/new/img/gnb/intro_04.jpg" id="intro_04" onmouseover="mouseOver('intro_04')" onmouseout="mouseOut('intro_04')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/intro/index4.php"><img src="http://www.yangak.com/new/img/gnb/intro_05.jpg" id="intro_05" onmouseover="mouseOver('intro_05')" onmouseout="mouseOut('intro_05')" style="  float:left;"></a></li>
+				
+				</ul>
+				</div> 
+				</li>
+
+
+
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb2">
+				<a href="http://www.yangak.com/new/implant01" title="임플란트"><img src="http://www.yangak.com/new/img/top/submenu_08.jpg"></a>
+		
+				<div id="" class="gnb_sub2">
+				<ul class="gnb_sub2" style="display:none;">
+				<li><a href="http://www.yangak.com/new/implant01/index1.php"><img src="http://www.yangak.com/new/img/gnb/implant01_01.jpg" id="implant01_01" onmouseover="mouseOver('implant01_01')" onmouseout="mouseOut('implant01_01')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/implant01/index2.php"><img src="http://www.yangak.com/new/img/gnb/implant01_02.jpg" id="implant01_02" onmouseover="mouseOver('implant01_02')" onmouseout="mouseOut('implant01_02')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/implant01/index3.php"><img src="http://www.yangak.com/new/img/gnb/implant01_03.jpg" id="implant01_03" onmouseover="mouseOver('implant01_03')" onmouseout="mouseOut('implant01_03')" style="  float:left;"></a></li>
+				</ul>
+				</div>
+				</li>
+
+
+
+
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb3">
+				<a href="http://www.yangak.com/new/yangak" title="양악수술센터"><img src="http://www.yangak.com/new/img/top/submenu_01.jpg"></a>
+		
+				<div id="" class="gnb_sub3">
+				<ul class="gnb_sub3" style="display:none;">
+				<li><a href="http://www.yangak.com/new/yangak/index.php"><img src="http://www.yangak.com/new/img/gnb/yangak_01.jpg" id="yangak_01" onmouseover="mouseOver('yangak_01')" onmouseout="mouseOut('yangak_01')" style="  float:left;"></a></li>		
+				<li><a href="http://www.yangak.com/new/yangak/index1.php"><img src="http://www.yangak.com/new/img/gnb/yangak_02.jpg" id="yangak_02" onmouseover="mouseOver('yangak_02')" onmouseout="mouseOut('yangak_02')" style="  float:left;"></a></li>			
+				<li><a href="http://www.yangak.com/new/yangak/index2.php"><img src="http://www.yangak.com/new/img/gnb/yangak_03.jpg" id="yangak_03" onmouseover="mouseOver('yangak_03')" onmouseout="mouseOut('yangak_03')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/yangak/index3.php"><img src="http://www.yangak.com/new/img/gnb/yangak_04.jpg" id="yangak_04" onmouseover="mouseOver('yangak_04')" onmouseout="mouseOut('yangak_04')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/yangak/index4.php"><img src="http://www.yangak.com/new/img/gnb/yangak_05.jpg" id="yangak_05" onmouseover="mouseOver('yangak_05')" onmouseout="mouseOut('yangak_05')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/yangak/index10.php"><img src="http://www.yangak.com/new/img/gnb/yangak_06.jpg" id="yangak_06" onmouseover="mouseOver('yangak_06')" onmouseout="mouseOut('yangak_06')" style="  float:left;"></a></li>
+				</ul>
+				</div>
+				</li>
+
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb4"><a href="http://www.yangak.com/new/v_clinic" id="v_clinic" title="안면윤곽센터"><img src="http://www.yangak.com/new/img/top/submenu_02.jpg"></a>
+				
+				
+				<div id="" class="gnb_sub4">
+				<ul class="gnb_sub4" style="display:none;">
+				<li><a href="http://www.yangak.com/new/v_clinic/index.php"><img src="http://www.yangak.com/new/img/gnb/v_clinic_01.jpg" id="v_clinic_01" onmouseover="mouseOver('v_clinic_01')" onmouseout="mouseOut('v_clinic_01')" style="float:left;"></a></li>
+				
+
+				<li><a href="http://www.yangak.com/new/v_clinic/index1.php"><img src="http://www.yangak.com/new/img/gnb/v_clinic_02.jpg" id="v_clinic_02" onmouseover="mouseOver('v_clinic_02')" onmouseout="mouseOut('v_clinic_02')" style="float:left;"></a></li>
+
+				<li><a href="http://www.yangak.com/new/v_clinic/index6.php"><img src="http://www.yangak.com/new/img/gnb/v_clinic_03.jpg" id="v_clinic_03" onmouseover="mouseOver('v_clinic_03')" onmouseout="mouseOut('v_clinic_03')" style="float:left;"></a></li>
+				</ul>
+				</div></li>
+
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb5"><a href="http://www.yangak.com/new/implant/index2.php" title="구강외과센터"><img src="http://www.yangak.com/new/img/top/submenu_07.jpg"></a>
+	
+				<div id="" class="gnb_sub5">
+				<ul class="gnb_sub5" style="display:none;">
+		
+				<li><a href="http://www.yangak.com/new/implant/index2.php"><img src="http://www.yangak.com/new/img/gnb/implant_03.jpg" id="implant_03" onmouseover="mouseOver('implant_03')" onmouseout="mouseOut('implant_03')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/implant/index3.php"><img src="http://www.yangak.com/new/img/gnb/implant_04.jpg" id="implant_04" onmouseover="mouseOver('implant_04')" onmouseout="mouseOut('implant_04')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/implant/index7.php"><img src="http://www.yangak.com/new/img/gnb/implant_05.jpg" id="implant_05" onmouseover="mouseOver('implant_05')" onmouseout="mouseOut('implant_05')" style="  float:left;"></a></li>
+				<li><a href="http://www.yangak.com/new/implant/index9.php"><img src="http://www.yangak.com/new/img/gnb/implant_06.jpg" id="implant_06" onmouseover="mouseOver('implant_06')" onmouseout="mouseOut('implant_06')" style="  float:left;"></a></li>
+				</ul>
+				</div>
+				</li>
+
+
+				<li style="padding: 38px 6px 0 6px;width:107px;text-align:right;height:34px;" class="gnb6"><a href="http://www.yangak.com/new/bbs/board.php?bo_table=news" title="커뮤니티"><img src="http://www.yangak.com/new/img/top/submenu_05.jpg"></a>
+
+				<div id="" class="gnb_sub6">
+				<ul class="gnb_sub6" style="display:none;">
+				<li><a href="/new/bbs/board.php?bo_table=news"><img src="http://www.yangak.com/new/img/gnb/communavi_01.jpg" id="communavi_01" onmouseover="mouseOver('communavi_01')" onmouseout="mouseOut('communavi_01')" style="  float:left;"></a></li>
+		
+				<li><a href="/new/bbs/board.php?bo_table=report"><img src="http://www.yangak.com/new/img/gnb/communavi_03.jpg" id="communavi_03" onmouseover="mouseOver('communavi_03')" onmouseout="mouseOut('communavi_03')" style="  float:left;"></a></li>
+				<li><a href="/new/bbs/board.php?bo_table=guest"><img src="http://www.yangak.com/new/img/gnb/communavi_04.jpg" id="communavi_04" onmouseover="mouseOver('communavi_04')" onmouseout="mouseOut('communavi_04')" style="  float:left;"></a></li>
+				<li><a href="/new/bbs/board.php?bo_table=hugi"><img src="http://www.yangak.com/new/img/gnb/communavi_05.jpg" id="communavi_05" onmouseover="mouseOver('communavi_05')" onmouseout="mouseOut('communavi_05')" style="  float:left;"></a></li>
+				<li><a href="/new/community/index2.php"><img src="http://www.yangak.com/new/img/gnb/communavi_06.jpg" id="communavi_06" onmouseover="mouseOver('communavi_06')" onmouseout="mouseOut('communavi_06')" style="  float:left;"></a></li>
+				<li><a href="/new/community/index.php"><img src="http://www.yangak.com/new/img/gnb/communavi_07.jpg" id="communavi_07" onmouseover="mouseOver('communavi_07')" onmouseout="mouseOut('communavi_07')" style="  float:left;"></a></li>
+				</ul>
+				</div>
+				
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+		</div>	
+	</div>
+</div>
+
+
 </div>
 </html>

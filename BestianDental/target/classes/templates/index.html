@@ -8,16 +8,14 @@
 	<ul class ="visual_wrap"> 
 		<!-- 이미지가 들어가는 태그  list1--> 
 		<li class ="list1">
-	<!-- 		<div class ="mainImage"><img alt="" src="/img/main/main_4.png"></div> -->
-		
 			<div class ="leftTap"> 
 				<div class ="visual_img title target">  
-					<div class ="imageWrap"><img alt="" src="/img/main/title.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/title_m.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
 				</div>
 				 
 				<div class ="visual_img sub target">
-					<div class =imageWrap><img alt="" src="/img/main/sub.png"></div>
+					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
 				</div>  
 				
 				<div>
@@ -27,7 +25,79 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+				</div>
+			</div>
+		</li>
+		 
+		<!-- 이미지가 들어가는 태그  list1--> 
+		<li class ="list2">
+			<div class ="leftTap"> 
+				<div class ="visual_img title target">  
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
+				</div>
+				 
+				<div class ="visual_img sub target">
+					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+				</div>  
+				
+				<div>
+				
+				</div>
+			</div>
+			
+			<div class ="visual_imgWrap text target">
+				<div class ="visual_img">
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+				</div>
+			</div>
+		</li>
+		 
+		<!-- 이미지가 들어가는 태그  list1--> 
+		<li class ="list3">
+			<div class ="leftTap"> 
+				<div class ="visual_img title target">  
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
+				</div>
+				 
+				<div class ="visual_img sub target">
+					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+				</div>  
+				
+				<div>
+				
+				</div>
+			</div>
+			
+			<div class ="visual_imgWrap text target">
+				<div class ="visual_img">
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+				</div>
+			</div>
+		</li>
+		 
+		<!-- 이미지가 들어가는 태그  list1--> 
+		<li class ="list4">
+			<div class ="leftTap"> 
+				<div class ="visual_img title target">  
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
+				</div>
+				 
+				<div class ="visual_img sub target">
+					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+				</div>   
+				
+				<div>
+				
+				</div>
+			</div>
+			
+			<div class ="visual_imgWrap text target">
+				<div class ="visual_img">
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
 				</div>
 			</div>
 		</li>
@@ -59,14 +129,14 @@
 				<div class ="semiBox">
 					<div class ="semiTitle"><h3>Before</h3></div>
 					<div class ="semiContent">
-						<div class ="imageWrap"><img alt="" src="/img/main/before.png"></div>
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/before.png"></div>
 					</div>
 				</div>
 				
 				<div class ="semiBox after">
 					<div class ="semiTitle"><h3>After</h3><span class="more">더보기 <img alt="" src="/img/main/ic_add_box_24px.png"> </span></div>
 					<div class ="semiContent">
-						<div class ="imageWrap"><img alt="" src="/img/main/after.png"></div>
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/after.png"></div>
 					</div>
 				</div>
 			</div>
@@ -105,19 +175,12 @@
 			var FullWidth = $("#mainVisual").width();
 			
 			if(1920> FullWidth && FullWidth  < 1642){ 
-				/* $(".visual_imgWrap.text").width(textImgW - (1920 - FullWidth)); */
 				var tempWidth = $(".visual_imgWrap.text").css("right").replace("px","");
-				
 				$(".visual_imgWrap.text").css("right",-((1642 - FullWidth)/2 + 47)); 
-				
-/* 				$(".visual_imgWrap.text").width(textImgW - ((1920 - FullWidth)/3 +(1920 - FullWidth)%3 )); */
-				
 			} else if(FullWidth < 1920){
-				
  				$(".visual_imgWrap.text").css("right",-(1920 - FullWidth)/6); 
 			} else{
 				$(".visual_imgWrap.text").css("right","0"); 
-			/* 	$(".visual_imgWrap.text").width(textImgW); */
 				
 			}
 			 
@@ -138,7 +201,6 @@
 					$(".visual_imgWrap.text").css("right","0"); 
 				}
  			}
-			
 		
 			main();
 			
@@ -151,6 +213,8 @@
 		    var $visualWrap = $mainVisual.find(".visual_wrap"), 
 		      	  $visualWrapLi = $visualWrap.find("li"),
 		    	  _visualLength = $visualWrapLi.length;
+		    
+		    var $indiBtn = $mainVisual.find("#indiBtn");
 		    
 		    /* TweenMax.staggerTo($visualWrapLi.eq(0).find(" .title, .sub, .text"), .3, {y: 0, opacity: 1, ease: es_step}, .2); */
 
@@ -165,6 +229,10 @@
 		    TweenMax.delayedCall(0.5,function(){
 			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
+		    
+		    TweenMax.delayedCall(0.6,function(){ 
+			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
 		     
 		    TweenMax.delayedCall(0.7,function(){
 			  $(".semiContent").addClass("active");
@@ -178,16 +246,33 @@
 		        set: function (_visualCrr) {
 		            _visualCrr = _visualCrr % _visualLength;
 		            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step});
-		            TweenMax.to($visualWrapLi.find(".title,.sub,.text"), .5, {y: 30, opacity: 0, ease: es_step});
+		            
 		            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
-		            TweenMax.staggerTo($visualWrapLi.eq(_visualCrr).find(".title,.sub,.text"), 1, {y: 0, opacity: 1, ease: es_step}, .2);
+		            
+				    TweenMax.delayedCall(0.3,function(){
+					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+				    });
 
+				    TweenMax.delayedCall(0.4,function(){
+					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+				    });
+
+				    TweenMax.delayedCall(0.5,function(){
+					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+				    });
 		            $indiBtn.find("li button").removeClass("active");
 		            $indiBtn.find("li").eq(_visualCrr).find("button").addClass("active");
 		            this.num = _visualCrr;
 		        }
 		    });
 
+		    $indiBtn.find("button").click(function () {
+		        var _this = $(this);
+		        var _visualCrr = _this.parent().index();
+
+		        visualCrr.number = _visualCrr;
+		    });
+		    
 	 } 
 	
 /* function main(){

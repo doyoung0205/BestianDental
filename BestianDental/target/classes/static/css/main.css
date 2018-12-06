@@ -503,19 +503,19 @@ span.more img {
     position: relative;
 }
 .semiBox.after .semiContent.active::after {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 .semiBox.after .semiContent::after {
 	background: #f45858;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 }
@@ -571,13 +571,16 @@ leftTap::after {
 
 
 .visual_wrap .list1{
-	background-image: url(/img/main/main.png);
+	background-image: url(/img/main/carocel1/main.png);
 }
 .visual_wrap .list2{
-	background-image: url(/img/main/main.png);
+	background-image: url(/img/main/carocel1/main.png);
 }
 .visual_wrap .list3{
-	background-image: url(/img/main/main.png);
+	background-image: url(/img/main/carocel1/main.png);
+}
+.visual_wrap .list4{
+	background-image: url(/img/main/carocel1/main.png);
 }
 
 
@@ -638,6 +641,7 @@ select, input, button, textarea {
     left: 20%;
     bottom: 35%;
     z-index: 20;
+    opacity: 0;
 }
       
 #mainVisual #indiBtn li {
@@ -655,7 +659,7 @@ select, input, button, textarea {
 @media screen and (max-width:1280px) {
 	
 	.visual_wrap .list1{
-		background-image: url(/img/main/main_m.png);
+		background-image: url(/img/main/carocel1/main_m.png);
 	}
 
 
@@ -725,7 +729,7 @@ select, input, button, textarea {
 		display: none;
 	}
 	
-	div.cacaoLine {
+	.mainVisual-footer div.cacaoLine {
 		display: block;
 		background-color: #091931;
 		color: white;
@@ -746,7 +750,7 @@ select, input, button, textarea {
 @media screen and (max-width:1080px) {
 	
 	.visual_wrap .list1{
-		background-image: url(/img/main/main_sss.png);
+		background-image: url(/img/main/carocel1/main_sss.png);
 	}
 	
 	.visual_img.title img{
@@ -766,6 +770,9 @@ select, input, button, textarea {
 	    bottom: 3%;
 	}
 	
+	.semiContent {
+	    width: 300px;
+	}
 
 }
 
@@ -790,6 +797,17 @@ select, input, button, textarea {
 	.cacaoLine .content h1 b {
 	    margin: 0 75px 0 60px;
 	}
+	
+	.semiContent {
+	    width: 250px;
+	}
+	div.rightBox .semiBoxWrap {
+	    left: calc(50% - 250px);
+	}
+	.mainVisual-footer>div {
+	    min-height: 230px;
+	}
+	
 }
 
 @media screen and (max-width:815px) {
@@ -801,7 +819,7 @@ select, input, button, textarea {
 		display: table-cell !important;
 	}
 		.visual_wrap .list1{
-		background-image: url(/img/main/main_4.png);
+		background-image: url(/img/main/carocel1/main_4.png);
 	}
 	
 	
@@ -824,14 +842,14 @@ select, input, button, textarea {
 	    left: 0;
 	} 
 
-	div.rightBox .semiBoxWrap {
+/* 	div.rightBox .semiBoxWrap {
     display: block;
     position: absolute;
     left: calc(50% - 168px);
     width: 320px;
     top: 40px;
 }
-	.mainVisual-footer div.rightBox{
+ 	.mainVisual-footer div.rightBox{
 		min-height: 475px;
 	}
 	
@@ -839,11 +857,14 @@ select, input, button, textarea {
 	    margin-left: 0;
 	    margin-top: 30px;
 	}	
-			
+		*/	
 				
 	.cacaoLine .content h1 b {
   		  margin: 0 25px;
 	}
+	
+
+
 } 
 @media screen and (max-width:695px) {
 	.cacaoLine{
@@ -862,9 +883,43 @@ select, input, button, textarea {
 	.leftTap{
 		width: 250px;		
 	}
+	.mainVisual-footer> div.leftBox {
+	    min-height: 130px;
+	}
+		
+	.leftBox .content h1 {
+	    font-size: 30px;
+	}
 	
+	.leftBox .content {
+	    margin: 11px 14% 23px 0;
+	}
 	
 } 
+@media screen and (max-width:536px) {
 
+	.semiContent {
+	    width: 185px;
+	}
+	
+	div.rightBox .semiBoxWrap {
+	    left: calc(50% - 185px);
+	}
+
+}
+@media screen and (max-width:400px) {
+
+	.semiContent {
+	    width: 155px;
+	} 
+	
+	div.rightBox .semiBoxWrap {
+	    left: calc(50% - 155px);
+	}
+	
+	.mainVisual-footer>div {
+	    min-height: 185px;
+	}	
+}
 
 

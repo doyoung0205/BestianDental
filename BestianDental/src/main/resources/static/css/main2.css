@@ -1,0 +1,238 @@
+.menuBox {
+    width: 25%;
+    height: 610px;
+    border: 0px solid #ddd;
+    margin: 40px 0;
+    display: inline-block;
+    float: left;
+    box-shadow: 0 3px 7px #ddd;
+}
+
+.menuBox.first {
+    /* border-top-width: 35px;
+    border-top-color: rgb(218, 126, 126); */
+    opacity: 1;
+    background: #5f6167;
+    background-image: url(/img/main2/line-face.png);
+    position: relative;
+}
+
+.redBorder {
+    height: 35px;
+    background: rgb(204, 93, 93);
+    opacity: 0.7;	
+}
+
+.menuBox.second {
+	border-top-width: 35px;
+    border-top-color: #5f6167;
+    background-image: url(/img/main2/doctor.png);
+    background-color: #f3f1f1;    
+    opacity: 1;	
+}
+
+.quick {
+    width: 9%;
+    height: 305px;
+    position: absolute;
+    top: 997px;
+    right: 110px;
+	box-shadow: 4px 3px 7px 0 #ddd;
+}
+
+.menuText {
+	margin: 20px;
+}
+
+.menuText, .halfText {
+	padding: 25px;
+	margin-top: 0;
+
+}
+
+.menuText.first.top {
+
+}
+
+.menuText.first h2 {
+	color: #fff;
+}
+
+.menuText.first.bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.menuText.first.black, .halfText {
+	margin-top: 0;
+}
+
+.menuText.first.black h2 {
+	color: #000;
+}
+
+.mainMenu h2 {
+	font-size: 26px;
+	font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.menuBox.halfBox {
+    margin-bottom: 0;	
+	box-shadow: 4px 3px 7px 0 #ddd;
+}
+
+.halfText {
+	height: 305px;
+	position: relative;
+}
+
+.halfText:first-of-type {
+	border-bottom: 1px solid #ddd;
+	background: #0e2338;
+	position: relative;
+}
+
+.halfText:first-of-type h2 {
+	color: #fff;
+}
+
+h2.textRight {
+	text-align: right;
+	float: right;
+}
+
+
+h2.halfCall {
+    font-size: 40px;
+    letter-spacing: 1.4px;
+    font-weight: 550;
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+}
+
+.halfText.second {
+	background: #ddd;
+}
+
+.halfText.second h2 {
+	color: #000;
+}
+
+.halfText.third {
+    background: #F45858;
+    position: relative;
+}
+
+.halfText.third h2 {
+	color: #fff;
+}
+
+.clockImg {
+	display: inline-block;
+	float: left;
+	margin-top: 40px;
+}
+
+h2.textRight.top {
+	position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+.smallBox.first {
+    background: #F45858;
+    padding: 15px;
+    text-align: center;
+    height: 61px;
+}
+
+.smallBox.first h2, .smallBox.second h2 {
+    color: #fff;
+}
+
+.smallBox.second {
+	height: 122px;
+    padding: 13px;
+    background: #0e2338;
+}
+
+.smallBox {
+	display: table;
+	width: 171px;	
+}
+
+.contentBox {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.smallBox.second h2 {
+	margin-top: 10px;
+}
+
+.smallBox  h2 {
+	font-size: 19px;
+	margin: 0;
+    text-align: center;
+    font-weight: bold;
+	display: inline-block;
+}
+
+.smallBox.third {
+	padding: 13px;
+	background: #FFE600;
+	height: 122px;
+}
+
+.smallBox.third h2 {
+	margin-top: 14px;
+}
+
+h2.bigText {
+	font-size: 30px;
+}
+
+img.barImg {
+	margin-top: 22px;
+	float: right;
+}
+
+.callImgBox {
+    margin: 35px 10px 0;
+}
+
+.textRight.halfCall.time {
+	line-height: 40px;
+}
+
+.mapImgBox {
+	position: absolute;
+	bottom: 45px;
+}
+
+.smallMapBox {
+	float: left;
+	margin: 0 15px;	
+}
+
+.kakaoBox {
+	float: left;
+	margin-right: 5px;
+}
+
+.smallMapBox img {
+	width: 25px;
+}
+
+.kakaoBox img {
+	width: 50px;
+}
+@media (min-width: 1200px) {
+	div.container {
+	    width: 1280px;
+	}
+}

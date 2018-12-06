@@ -323,8 +323,7 @@ blockquote:before, blockquote:after,q:before, q:after {
 }
 
 
-/*doyoung */ 
-
+/*doyoung */  
 
 
 #mainVisual {
@@ -365,25 +364,19 @@ blockquote:before, blockquote:after,q:before, q:after {
 #mainVisual .visual_wrap .visual_img{
     position: absolute;
     display: table;
-    z-index: 10; 
+    z-index: 10;
     text-align: center;
 }
 
     
 .visual_img.title{
-	top: 8%;
-	left: -26px;
+	/* top: 8%; */
+	/* left: -26px; */
 }
 
-.visual_img.title .imageWrap:first-child{
-	display: table-cell !important;
-}
-.visual_img.title .imageWrap:last-child{
-	display: none !important;
-}
 .visual_img.sub{
-	top: 76%;
-	right: 53px;
+	top: 61%;
+	/* right: 53px; */
 }
 .visual_imgWrap.text .imageWrap{
 	bottom: 5%;
@@ -457,8 +450,6 @@ span.more {
     margin: 45px 14% 0 0;
 }
 
-.content {}
-
 .leftBox .content h1 {
     margin: 0;
     font-weight: bold;
@@ -472,7 +463,6 @@ span.more {
 .semiTitle {
     overflow: hidden;
     margin-bottom: 15px;
-    /* font-weight: bold; */
     padding-left: 12px;
 }
 
@@ -502,14 +492,15 @@ span.more img {
 .semiContent {
     position: relative;
 }
-.semiBox.after .semiContent.active::after {
+.semiBox.after:hover .semiContent::after {
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
     -o-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
-}
+} 
+
 .semiBox.after .semiContent::after {
 	background: #f45858;
     -webkit-transition: all 0.15s ease-out;
@@ -565,7 +556,7 @@ leftTap::after {
     overflow: hidden;
     height: 300px;
     position: absolute;
-    width: 870px;
+    width: 970px;
 }
 
 
@@ -582,6 +573,8 @@ leftTap::after {
 .visual_wrap .list4{
 	background-image: url(/img/main/carocel1/main.png);
 }
+
+
 
 
 .target{
@@ -638,7 +631,7 @@ select, input, button, textarea {
 #mainVisual #indiBtn {
     width: 100%;
     position: absolute;
-    left: 20%;
+/*     left: 20%; */
     bottom: 35%;
     z-index: 20;
     opacity: 0;
@@ -654,6 +647,33 @@ select, input, button, textarea {
 }
 
 
+.imageBarWrap {
+    float: left;
+    margin-top: 30px;
+}
+
+.imageContentWrap {
+    overflow: hidden;
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.visual_img.title.target {
+    position: initial;
+}
+
+.visual_img.sub.target {
+    position: relative;
+    display: block;
+}
+.bar {
+    background-color: #f45858;
+    height: 43px;
+    width: 578px;
+    opacity: 0;
+}
+
 /* 반응형 */
 
 @media screen and (max-width:1280px) {
@@ -662,15 +682,15 @@ select, input, button, textarea {
 		background-image: url(/img/main/carocel1/main_m.png);
 	}
 
-
+/* 
 	.visual_img.title img{
 		width: 550px;
 	}
 	.leftTap{
 		width: 550px;		
-	} 
+	}  */
 	
-	div.visual_img.title {
+/* 	div.visual_img.title {
 	    top: 26%;
 	    left: 0px;
 	} 
@@ -679,7 +699,7 @@ select, input, button, textarea {
     top: 64%;
     right: 0;
 }
-
+ */
 	
 
 	div.visual_imgWrap.text{
@@ -753,16 +773,16 @@ select, input, button, textarea {
 		background-image: url(/img/main/carocel1/main_sss.png);
 	}
 	
-	.visual_img.title img{
+/* 	.visual_img.title img{
 		width: 450px;
 	}
 	.leftTap{
 		width: 450px;		
-	}
+	} */
 	
 	div.visual_img.sub {
 	    top: 57%;
-	    right: 0;
+/* 	    right: 0; */
 	}
 		
 	#mainVisual #indiBtn {
@@ -811,36 +831,29 @@ select, input, button, textarea {
 }
 
 @media screen and (max-width:815px) {
-
-	.visual_img.title .imageWrap:first-child{
-		display: none !important; 
-	}
-	.visual_img.title .imageWrap:last-child{
-		display: table-cell !important;
-	}
 		.visual_wrap .list1{
 		background-image: url(/img/main/carocel1/main_4.png);
 	}
 	
 	
 	
-	.visual_img.title img{
+/* 	.visual_img.title img{
 		width: 300px;
 	}
 	.leftTap{
 		width: 300px;		
-	}
+	} */
 		
 	div.visual_img.sub {
 	    top: 50%;
-	    left: 0;
-	    margin-left: 20px;
+/* 	    left: 0;
+	    margin-left: 20px; */
 	}
 	
-	div.visual_img.title {
+/* 	div.visual_img.title {
 	    top: 20%;
 	    left: 0;
-	} 
+	}  */
 
 /* 	div.rightBox .semiBoxWrap {
     display: block;
@@ -877,12 +890,12 @@ select, input, button, textarea {
 
 @media screen and (max-width:615px) {
 
-	.visual_img.title img{
+/* 	.visual_img.title img{
 		width: 250px;
 	}
 	.leftTap{
 		width: 250px;		
-	}
+	} */
 	.mainVisual-footer> div.leftBox {
 	    min-height: 130px;
 	}

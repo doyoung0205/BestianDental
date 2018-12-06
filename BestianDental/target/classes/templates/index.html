@@ -7,19 +7,22 @@
 <section id ="mainVisual"> 
 	<ul class ="visual_wrap"> 
 		<!-- 이미지가 들어가는 태그  list1--> 
-		<li class ="list1">
+		<li class ="list1 active" >
 			<div class ="leftTap"> 
-				<div class ="visual_img title target">  
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
-				</div>
-				 
-				<div class ="visual_img sub target">
-					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
-				</div>  
-				
-				<div>
-				
+			<div class ="imageBarWrap">
+				<div class ="bar title"></div>
+			</div>
+			
+			<div class ="imageContentWrap">			
+					<div class ="visual_img title target">  
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					</div>
+					 
+					<div class ="visual_img sub target">
+						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+					</div>  
+			</div>		
+					<div>
 				</div>
 			</div>
 			
@@ -30,20 +33,25 @@
 			</div>
 		</li>
 		 
-		<!-- 이미지가 들어가는 태그  list1--> 
+
+		 
+		<!-- 이미지가 들어가는 태그  list2--> 
 		<li class ="list2">
 			<div class ="leftTap"> 
-				<div class ="visual_img title target">  
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
-				</div>
-				 
-				<div class ="visual_img sub target">
-					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
-				</div>  
-				
-				<div>
-				
+			<div class ="imageBarWrap">
+				<div class ="bar title"></div>
+			</div>
+			
+			<div class ="imageContentWrap">			
+					<div class ="visual_img title target">  
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					</div>
+					 
+					<div class ="visual_img sub target">
+						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+					</div>  
+			</div>		
+					<div>
 				</div>
 			</div>
 			
@@ -54,20 +62,24 @@
 			</div>
 		</li>
 		 
-		<!-- 이미지가 들어가는 태그  list1--> 
+
+		 		 		<!-- 이미지가 들어가는 태그  list3--> 
 		<li class ="list3">
 			<div class ="leftTap"> 
-				<div class ="visual_img title target">  
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
-				</div>
-				 
-				<div class ="visual_img sub target">
-					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
-				</div>  
-				
-				<div>
-				
+			<div class ="imageBarWrap">
+				<div class ="bar title"></div>
+			</div>
+			
+			<div class ="imageContentWrap">			
+					<div class ="visual_img title target">  
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					</div>
+					 
+					<div class ="visual_img sub target">
+						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+					</div>  
+			</div>		
+					<div>
 				</div>
 			</div>
 			
@@ -78,20 +90,24 @@
 			</div>
 		</li>
 		 
-		<!-- 이미지가 들어가는 태그  list1--> 
+
+		<!-- 이미지가 들어가는 태그  list4--> 
 		<li class ="list4">
 			<div class ="leftTap"> 
-				<div class ="visual_img title target">  
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title_m.png"></div>
-				</div>
-				 
-				<div class ="visual_img sub target">
-					<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
-				</div>   
-				
-				<div>
-				
+			<div class ="imageBarWrap">
+				<div class ="bar title"></div>
+			</div>
+			
+			<div class ="imageContentWrap">			
+					<div class ="visual_img title target">  
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+					</div>
+					 
+					<div class ="visual_img sub target">
+						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+					</div>  
+			</div>		
+					<div>
 				</div>
 			</div>
 			
@@ -102,6 +118,8 @@
 			</div>
 		</li>
 		 
+
+		 		 
 	</ul> 
 
 	<!-- 케러셀 버튼 -->
@@ -167,33 +185,41 @@
 
 	<script th:inline="javascript">
 	
-	var textImgW = $(".visual_imgWrap.text").width();
+	var winW;
+	var winH;
 	var es_step = "Expo.ease";
+	var $window = $(window);
 	
-	 $(window).resize(function() {
+	var textImgW = $(".visual_imgWrap.text").width();
+	var titleWidth = $(".visual_img.title.target").width();			
+	var subWidth = $(".visual_img.sub.target").width(); 		
+
+	 
+	 $window.load(function () {
+		 
+		    $window.on("resize", function () {
+		    	
+		        winW = $(this).width();
+		        winH = $(this).height();
+		        
+				Carocellayout();
+				
+		    });
+		    
+		    $(this).trigger("resize");
+
+		    Carocellayout();
+		    main();
+	 });
+	  
+	 
+	 function Carocellayout(){
 		 
 			var FullWidth = $("#mainVisual").width();
 			
-			if(1920> FullWidth && FullWidth  < 1642){ 
-				var tempWidth = $(".visual_imgWrap.text").css("right").replace("px","");
-				$(".visual_imgWrap.text").css("right",-((1642 - FullWidth)/2 + 47)); 
-			} else if(FullWidth < 1920){
- 				$(".visual_imgWrap.text").css("right",-(1920 - FullWidth)/6); 
-			} else{
-				$(".visual_imgWrap.text").css("right","0"); 
-				
-			}
-			 
-	 });
-	 
-	 $(function(){
-		 
- 			var FullWidth = $("#mainVisual").width();
-			
- 			
+			//sub 위치 조정
  			if(FullWidth > 1200){
 				if(1920> FullWidth && FullWidth  < 1642){ 
-					var tempWidth = $(".visual_imgWrap.text").css("right").replace("px","");
 					$(".visual_imgWrap.text").css("right",-((1642 - FullWidth)/2 + 47)); 
 				} else if(FullWidth < 1920){
 	 				$(".visual_imgWrap.text").css("right",-(1920 - FullWidth)/6); 
@@ -201,11 +227,47 @@
 					$(".visual_imgWrap.text").css("right","0"); 
 				}
  			}
-		
-			main();
+ 			
+			//title 위치 조정
+			var barWidth = $(".bar").width();
 			
-	 });
-	  
+			var titleTargetH =$(".visual_wrap li.active").find(" .title.target").height()/2+1;
+			if(1920> FullWidth && FullWidth  > 1280){
+				
+				var textWidth = $(".visual_wrap li.active .visual_imgWrap.text.target .visual_img").width();
+				var tempWidth = $(".visual_imgWrap.text").css("right").replace("px","") ;
+				tempWidth *= 1;
+				textWidth  = textWidth +tempWidth;
+				var dif  = FullWidth-textWidth;
+				
+				$(".bar").width(dif);
+				$("#indiBtn").css("left",dif);
+				
+				$(".visual_img.title.target").width(titleWidth);
+				$(".visual_img.sub.target").width(subWidth);
+				
+				$(".bar").height(titleTargetH);
+				
+				
+			} else if(FullWidth < 1280){
+				
+				
+				var semiWidth = $(".semiBox ").width()*2;
+				var dif = (FullWidth - semiWidth)/2;
+				
+				$(".bar").width(dif);
+				$("#indiBtn").css("left",dif);
+				
+				if(dif< 100){
+					$(".visual_img.title.target").width(titleWidth - (130-dif));
+					$(".visual_img.sub.target").width(subWidth -  (100-dif));
+				}
+				
+				$(".bar").height(titleTargetH);
+								
+			}
+	 }
+	 
 	 
 	 function main(){
 		    //mainVisual
@@ -234,11 +296,8 @@
 			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
 		     
-		    TweenMax.delayedCall(0.7,function(){
-			  $(".semiContent").addClass("active");
-		    });
-		     
 		    var visualCrr = {}; 
+		    
 		    Object.defineProperty(visualCrr, 'number', {
 		        get: function () { 
 		            return this.num || 0;
@@ -262,6 +321,8 @@
 				    });
 		            $indiBtn.find("li button").removeClass("active");
 		            $indiBtn.find("li").eq(_visualCrr).find("button").addClass("active");
+		            $visualWrapLi.removeClass("active");
+		            $visualWrapLi.eq(_visualCrr).addClass("active");
 		            this.num = _visualCrr;
 		        }
 		    });
@@ -274,52 +335,8 @@
 		    });
 		    
 	 } 
-	
-/* function main(){
-    //mainVisual
-    var $mainVisual = $("#mainVisual");
-    var $visualWrap = $mainVisual.find(".visual_wrap"),
-        $visualWrapLi = $visualWrap.find("li"),
-        _visualLength = $visualWrapLi.length;
-    
-    var $navBtn = $mainVisual.find("#navBtn"),
-        $prevBtn = $navBtn.find(".prev"),
-        $nextBtn = $navBtn.find(".next");
-    
-    var $indiBtn = $mainVisual.find("#indiBtn");
-    TweenMax.staggerTo($visualWrapLi.eq(0).find("h3,p,a"), .3, {y: 0, opacity: 1, ease: es_step}, .2);
-    var visualCrr = {};
-    Object.defineProperty(visualCrr, 'number', {
-        get: function () {
-            return this.num || 0;
-        },
-        set: function (_visualCrr) {
-            _visualCrr = _visualCrr % _visualLength;
-            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step});
-            TweenMax.to($visualWrapLi.find("h3,p,a"), .5, {y: 30, opacity: 0, ease: es_step});
-            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
-            TweenMax.staggerTo($visualWrapLi.eq(_visualCrr).find("h3,p,a"), 1, {y: 0, opacity: 1, ease: es_step}, .2);
-
-            $indiBtn.find("li button").removeClass("active");
-            $indiBtn.find("li").eq(_visualCrr).find("button").addClass("active");
-            this.num = _visualCrr;
-        }
-    });
-    $nextBtn.click(function () {
-        visualCrr.number++;
-    });
-    $prevBtn.click(function () {
-        visualCrr.number--;
-    });
-    $indiBtn.find("button").click(function () {
-        var _this = $(this);
-        var _visualCrr = _this.parent().index();
-
-        visualCrr.number = _visualCrr;
-    });
-}	
- */
-
+	 
+	 
 		
 	</script>
 

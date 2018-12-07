@@ -296,6 +296,14 @@ div.container.appear {
 	display: none;;
 }
 
+.smallH2 {
+	margin-top: 0; 
+}
+
+.smallH2.textRight {
+	text-align: right;
+}
+
 
 @media (min-width: 1200px) {
 	div.container {
@@ -543,6 +551,10 @@ div.container.appear {
 	.halfBox.appear.second {
 		background-size: 490px 230px;
 	}
+	
+	h2.smallH2 {
+		font-size: 17px;
+	}
 }
 
 @media screen and (max-width: 489px) {
@@ -587,5 +599,9 @@ div.container.appear {
 	.halfBox.appear.second {
 		background-size: 200px 270px;
 	    background-image: url(/img/main2/doc-ss.png);
+	}
+	
+	h2.smallH2 {
+		font-size: 14px;
 	}
 }

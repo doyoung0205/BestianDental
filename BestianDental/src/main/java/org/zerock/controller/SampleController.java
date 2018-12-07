@@ -15,6 +15,13 @@ public class SampleController {
 		log.info("index");
 		return "index";
 	}
+	
+	@GetMapping("/test")
+	public void test() {
+		
+		log.info("test");
+		
+	}
 
 
 }

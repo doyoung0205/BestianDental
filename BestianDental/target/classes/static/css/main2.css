@@ -1,11 +1,13 @@
 .menuBox {
     width: 25%;
     height: 610px;
-    border: 0px solid #ddd;
+    /* border: 0px solid #ddd; */
     margin: 40px 0;
     display: inline-block;
     float: left;
     box-shadow: 0 3px 7px #ddd;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }
 
 .menuBox.first {
@@ -20,12 +22,22 @@
 .redBorder {
     height: 35px;
     background: rgb(204, 93, 93);
-    opacity: 0.7;	
+    opacity: 0.7;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.grayBorder {
+	height: 35px;
+    background: rgb(95, 97, 103);
+    opacity: 0.7;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
 }
 
 .menuBox.second {
-	border-top-width: 35px;
-    border-top-color: #5f6167;
+	/* border-top-width: 35px;
+    border-top-color: #5f6167; */
     background-image: url(/img/main2/doctor.png);
     background-color: #f3f1f1;    
     opacity: 1;	
@@ -63,7 +75,7 @@
 	bottom: 0;
 }
 
-.menuText.first.black, .halfText {
+.menuText.first.top .menuText.first.black, .halfText {
 	margin-top: 0;
 }
 
@@ -76,7 +88,10 @@
 	font-weight: bold;
     letter-spacing: -0.4px;
     line-height: 30px;
-    display: inline-block;
+}
+
+.menuBox.halfBox h2 {
+	display: inline-block;
 }
 
 .menuBox.halfBox {
@@ -110,8 +125,9 @@ h2.halfCall {
     letter-spacing: 1.4px;
     font-weight: 550;
     position: absolute;
-    bottom: 35px;
-    right: 30px;
+    bottom: 5%;
+    right: 5%;
+    left: 8%;
 }
 
 .halfText.second {
@@ -134,13 +150,15 @@ h2.halfCall {
 .clockImg {
 	display: inline-block;
 	float: left;
-	margin-top: 40px;
+	position: absolute;
+    bottom: 13%;
+    left: 6%;
 }
 
 h2.textRight.top {
 	position: absolute;
-    bottom: 30px;
-    right: 20px;
+    bottom: 5%;
+    right: 5%;
 }
 
 .smallBox.first {
@@ -197,7 +215,7 @@ h2.bigText {
 }
 
 img.barImg {
-	margin-top: 22px;
+	margin-top: 30px;
 	float: right;
 }
 
@@ -211,7 +229,7 @@ img.barImg {
 
 .mapImgBox {
 	position: absolute;
-	bottom: 45px;
+	bottom: 14%;
 }
 
 .smallMapBox {
@@ -231,8 +249,339 @@ img.barImg {
 .kakaoBox img {
 	width: 50px;
 }
+
+.halfBox.appear {
+	
+}
+
+.halfBox.appear.first {
+	background-image: url(/img/main2/line-face.png);
+    background-color: #5f6167;
+    background-size: 357px;
+}
+
+.halfBox.appear.second {
+	background-image:url(/img/main2/doc_w.png);
+	background-color: #f3f1f1;
+	background-size: 170px;
+	position: relative;
+}
+
+.halfBox.appear {
+	display: inline-block;
+	float: left;
+    width: 50%;
+}
+
+.halfText.first {
+	color: #fff;
+}
+
+.halfText.first h2 {
+
+}
+
+.nameText {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    font-size: 22px;	
+}
+
+.halfText.second.appear {
+	background: none;
+}
+
+div.container.appear {
+	display: none;;
+}
+
+
 @media (min-width: 1200px) {
 	div.container {
 	    width: 1280px;
+	}
+}
+
+@media screen and (max-width: 1840px) {
+	.quick {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	
+	div.container {
+	    width: 100%;
+	    padding: 0;
+	}
+	
+	.halfText h2.halfCall {
+		font-size: 27px;
+	}
+	
+	.mainMenu h2 {
+		font-size: 20px;
+	}
+	
+	.textRight.halfCall.time {
+		line-height: 30px;
+	}
+	
+	.iconImg {
+		width: 40px;
+	}
+	
+	.menuBox {
+		height: 520px;
+		margin: 0;
+	}
+	
+	.halfText {
+		height: 260px;
+	}
+	
+	.menuBox.second {
+		background-size: 337px 536px;
+		border-top-width: 10px;
+		
+	}
+	
+	.redBorder {
+		height: 10px;
+	}
+	
+	.grayBorder {
+		height: 10px;
+	}
+	
+	img.barImg {
+		margin-top: 32px;
+	}
+	
+	.menuText, .halfText {
+		padding: 15px;
+	}
+	
+	.menuText {
+		margin: 15px;
+	}
+	
+	/* .clockImg {
+		left: 15px;
+	} */
+	
+	h2.bigText {
+		font-size: 25px;
+	}
+	
+}
+
+@media screen and (min-width: 851px) and (max-width: 1050px){
+	.menuBox.second {
+		background-size: 280px 520px;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.mainMenu h2 {
+		font-size: 18px;
+	}
+	
+	/* h2.halfCall {
+		left: 15px;
+	} */
+	
+	.halfText h2.halfCall {
+		font-size: 22px;
+	}
+	
+	h2.bigText {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.menuText.first h2 {
+		margin-top: 0;
+	}
+	
+	.menuBox {
+		height: 460px;
+	}
+	
+	.halfText {
+		height: 230px;
+	}
+	
+	.callImgBox {
+		margin: 15px 10px 0;	
+	}
+	
+	.menuText.first h2 {
+		margin-top: 0;
+	}
+	
+	.menuBox.halfBox h2 {
+		margin-top: 5px;
+	}
+	
+	img.barImg {
+		margin-top: 16px;
+	    width: 30px;
+	}
+	
+	.menuText {
+		margin: 10px;
+	}
+	
+	/* h2.textRight.top {
+		right: 10px;
+	} */
+	
+	.textRight.halfCall.time {
+		right: 15px;
+	}
+	
+	.halfText h2.halfCall {
+		font-size: 19px;
+	}
+	
+	.menuBox.second {
+		background-size: 257px 468px;
+	}
+}
+
+@media screen and (max-width: 810px) {
+	.mainMenu h2 {
+		font-size: 16px;
+	}
+	
+	h2.bigText {
+		font-size: 20px;
+	}
+	
+	.iconImg {
+		width: 35px;
+	}
+	
+	.menuBox.second {
+		background-size: 237px 415px;
+	}
+	
+	.menuText, .halfText {
+		padding: 10px;
+	}
+	
+	.halfText {
+		height: 200px;
+	}
+	
+	.menuBox {
+		height: 400px;
+	}
+}
+	
+@media screen and (max-width: 749px) {
+	
+	div.container.appear {
+		display: block;
+	}
+	
+	.menuBox.first, .menuBox.second 	{
+		display: none;
+	}
+	
+	.menuBox.halfBox {
+		width: 50%;
+	}
+	
+	h2.textRight.days {
+		position: absolute;
+	    right: 20px;
+	    top: 40px;
+	    margin-top: 20px;
+	}
+	
+	.halfText {
+		padding: 20px;
+	}
+	
+	.mainMenu h2 {
+		font-size: 20px;
+	}
+	
+	/* h2.textRight.top {
+		right: 20px;
+		bottom: 15px;
+	} */
+	
+	.iconImg {
+		width: 50px;
+	}
+	
+	/* h2.halfCall {
+		bottom: 15px;
+	} */
+	
+	.halfText h2.halfCall {
+		font-size: 23px;
+	}
+	
+	/* h2.halfCall {
+		left: 20px;
+	} */
+	
+	/* .clockImg {
+		bottom: 35px;
+	} */
+	
+	.halfBox.appear.second {
+		background-size: 490px 230px;
+	}
+}
+
+@media screen and (max-width: 489px) {
+	.mainMenu h2 {
+		font-size: 16px;
+	}
+	
+	.halfText h2.halfCall {
+		font-size: 19px;
+		letter-spacing: 0.4;
+	}
+	
+	.iconImg {
+		width: 30px;
+	}
+	
+	.halfText {
+		padding: 15px;
+	}
+	
+	/* h2.halfCall {
+		left: 10px;
+	} */
+	
+	/* .mapImgBox {
+		bottom: 55px;
+	} */
+	
+	img.barImg {
+	    margin-top: 15px;
+   	 	width: 20px;	
+	}
+	
+	.menuBox {
+		height: 380px;
+	}
+	
+	.halfText {
+		height: 190px;
+	}
+	
+	.halfBox.appear.second {
+		background-size: 200px 270px;
+	    background-image: url(/img/main2/doc-ss.png);
 	}
 }

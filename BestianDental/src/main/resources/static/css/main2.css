@@ -375,6 +375,10 @@ div.container.appear {
 		font-size: 25px;
 	}
 	
+	.halfText {
+		padding: 20px;
+	}
+	
 }
 
 @media screen and (min-width: 851px) and (max-width: 1050px){

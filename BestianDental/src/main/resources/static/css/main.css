@@ -375,7 +375,7 @@ a:link, a:visited, a:active, a:hover {
 #mainVisual {
     position: relative;
     overflow: hidden;
-    height: 585px;
+    height: 584px;
     width: 100%;
 }
 
@@ -443,9 +443,9 @@ a:link, a:visited, a:active, a:hover {
 }
 
 .leftBox {
+    /* padding: 17.5px 0px; */
     width: 42%;
-    /* padding-top: 20px; */
-    /* padding-right: 20px; */
+    /* padding-right: 32px; */
     color: #ffffff;
     background-color: #091931;
 }
@@ -453,14 +453,14 @@ a:link, a:visited, a:active, a:hover {
 .rightBox {
     background-color: #404355;
     width: 58%;
-    padding: 35px 0 0 55px;
+    /* padding: 35px 0 0 55px; */
     color: white;
 }
 
 .mainVisual-footer>div {
     float: right;
     /* height: 100%; */
-    min-height: 275px;
+    min-height: 250px;
 }
 
 .semiBox {
@@ -488,7 +488,7 @@ span.more {
 .cacaoLine-Box span {
     color: #ffe600;
     padding-right: 20px;
-    line-height: -32px;
+    line-height: 32px;
     font-size: 24px;
     vertical-align: middle;
     font-weight: bold;
@@ -594,6 +594,7 @@ span.more img {
 
 .semiBoxWrap {
     overflow: hidden;
+    margin: 32px 0px 0 35px;
 }
 
 leftTap::after {
@@ -615,7 +616,7 @@ leftTap::after {
 	background-image: url(/img/main/carocel1/main.png);
 }
 .visual_wrap .list2{
-	background-image: url(/img/main/carocel1/main.png);
+	background-image: url(/img/main/carocel2/back.png);
 }
 .visual_wrap .list3{
 	background-image: url(/img/main/carocel1/main.png);
@@ -684,7 +685,7 @@ select, input, button, textarea {
     width: 100%;
     position: absolute;
     left: 575px;
-    bottom: 35%;
+    bottom: 37%;
     z-index: 20;
     opacity: 0;
 }
@@ -784,6 +785,7 @@ select, input, button, textarea {
 	left: calc(50% - 316px);
 	width: 642px;
 	top: 40px;
+	margin: 0;
 	}
 	
 	#mainVisual{
@@ -818,6 +820,11 @@ select, input, button, textarea {
 	.cacaoLine .content h1 b {
 	    margin: 0 126px 0 126px;
 	}	      
+
+	.cacaoLine > div > div > h1 {
+	    line-height: 135px;
+	}	
+		
 }
 
 
@@ -951,10 +958,11 @@ select, input, button, textarea {
 	} */
 	.mainVisual-footer> div.leftBox {
 	    min-height: 130px;
+	    padding-top: 0;
 	}
 		
 	.leftBox .content h1 {
-	    font-size: 30px;
+	    /* font-size: 30px; */
 	}
 	
 	.leftBox .content {

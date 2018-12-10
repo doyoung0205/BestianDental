@@ -44,11 +44,11 @@
 			
 			<div class ="imageContentWrap">			
 					<div class ="visual_img title target">  
-						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel2/title.png"></div>
 					</div>
 					 
 					<div class ="visual_img sub target">
-						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+						<div class =imageWrap><img alt="" src="/img/main/carocel2/sub.png"></div>
 					</div>  
 			</div>		
 					<div>
@@ -57,7 +57,7 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div>
 				</div>
 			</div>
 		</li>
@@ -78,8 +78,8 @@
 					<div class ="visual_img sub target">
 						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
 					</div>  
-			</div>		
-					<div>
+						</div>		
+					<div> 
 				</div>
 			</div>
 			
@@ -161,16 +161,16 @@
 		</div>
 			
 		<div class ="leftBox">
-				<div class ="content">
-					<div  class ="cacaoLine-Box"><span>카카오톡 상담</span><img alt="" src="/img/main/kakao.png"></div>
-					<div><h1>BESTIANSEOUL</h1></div>
-				</div>
+			<div class ="content">
+				<div  class ="cacaoLine-Box"><span>카카오톡 상담</span><img alt="" src="/img/main/kakao.png"></div>
+				<div><h1>BESTIANSEOUL</h1></div>
+			</div>
 		</div>
 		
 		<div class ="cacaoLine">
-				<div class ="content">
-					<div><h1><span>카카오톡 상담</span><b>BESTIANSEOUL</b><img alt="" src="/img/main/kakao.png"></h1></div>
-				</div>
+			<div class ="content">
+				<div><h1><span>카카오톡 상담</span><b>BESTIANSEOUL</b><img alt="" src="/img/main/kakao.png"></h1></div>
+			</div>
 		</div>
 
 	</div>		
@@ -192,7 +192,7 @@
 	var subWidth; 		
 	var es_step = "Expo.ease";
 	var $window = $(window);
-
+ 
 	$(function(){
 		  
 			 textImgW = $(".visual_imgWrap.text").width();
@@ -271,12 +271,19 @@
 				$initBtn.css("left",dif);
 				
 				if(dif< 203 && dif > 90){
-					$title.width(titleWidth - (203-dif));
-					$sub.width(subWidth -  (203-dif));
+					$title.width(titleWidth - (243-dif));
+					$sub.width(subWidth -  (243-dif));
+					
 				}else if(dif < 90){
+					
+					console.log("dif 가 90 보다 작을때");
 					$title.width(240);
 					$sub.width(226);
+					
 				}else if(dif > 90){
+					
+					console.log("dif 가 90 보다 작을때");
+					
 					$title.width(348);
 					$sub.width(319);
 				}
@@ -332,18 +339,66 @@
 		            
 		            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
 		            
-				    TweenMax.delayedCall(0.3,function(){
-					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-				    });
+		            if(_visualCrr == 1){
+			            
+					    TweenMax.delayedCall(0.3,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
 
-				    TweenMax.delayedCall(0.4,function(){
-					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-				    });
+					    TweenMax.delayedCall(0.4,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+					    });
 
-				    TweenMax.delayedCall(0.5,function(){
-					    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-				    });
-				    
+					    TweenMax.delayedCall(0.5,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+					    
+		            }else if(_visualCrr == 2){
+			            
+					    TweenMax.delayedCall(0.3,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.4,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.5,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+					    
+		            	
+		            }else if(_visualCrr == 3){
+			            
+					    TweenMax.delayedCall(0.3,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.4,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.5,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+					    
+		            }else if(_visualCrr == 4){
+			            
+					    TweenMax.delayedCall(0.3,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.4,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+					    });
+
+					    TweenMax.delayedCall(0.5,function(){
+						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+					    });
+					    
+					    
+		            }
+
 		            $indiBtn.find("li button").removeClass("active");
 		            $indiBtn.find("li").eq(_visualCrr).find("button").addClass("active");
 		            

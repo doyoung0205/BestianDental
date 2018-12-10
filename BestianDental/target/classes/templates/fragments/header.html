@@ -2,25 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <div th:fragment="header">
- 
-	
 <div class="sidebarMenu">
-
-		<!-- 1.로그인여부
-			 2. 권한여부에 맞추어 보여주기
-		 -->
-		
 		<!-- 일반유저 마이페이지 -->
-		
-		
-
 	<ul class="menuSet">
-
 			<li class="set">
 				<h2 class="title">베스티안치과</h2>
-				<div class="buttonBox">
+<!-- 				<div class="buttonBox">
 					<button class ="logoutBtn" onclick="logout();">로그아웃</button>
-				</div>				
+				</div> -->				
 				<ul class="innerUl">
 					<li><a href="http://www.yangak.com/new/intro/index.php">베스티안 치과 소개</a></li>
 					<li><a href="http://www.yangak.com/new/intro/index1.php">대표원장 인사말</a></li>
@@ -44,8 +33,8 @@
 		<li class="set">
 			<h2 class="title">양악수술</h2>
 			<ul class="innerUl">
-				<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-				<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+				<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+				<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 				<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 				<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 				<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -80,7 +69,9 @@
 			<ul class="innerUl">
 				<li><a href="/new/bbs/board.php?bo_table=news">베스티안 공지사항</a></li>
 				<li><a href="/new/bbs/board.php?bo_table=report">베스티안 언론보도</a></li>
-			</ul>
+			</ul> 
+		</li>
+		<li style="height: 102px;">
 		</li>
 	</ul>		
 					
@@ -88,21 +79,33 @@
 <!-- mobile menu  -->
 
     <div class="overlay92"></div>
-	<header>
-		<div class="container" id="scroll">
-		</div>
-	</header> 
-
+ 
 	<nav>
-		<div class ="container">
+	<div class ="container">
+			<!--  -->
+	<div class="h-members">
+	         <div class="h-members-btns">
+	             <div class="h-members-sns-btns">
+	                 <a href class="fb"  target="_blank">로그인</a>
+	                 <a href="http://www.yangak.com/new/bbs/register.php" class="insta" target="_blank">회원가입</a>
+	  				 <a href="http://www.yangak.com/new/adm/" class="lifeplus" target="_blank" >관리자화면</a>
+	             </div>
+	         </div>
+	     </div>
 			
 		</div>
-		<div class="container">
+		<div class="container bannerBox">
 			<div class="brandLogo">
 				<a href="/"><img src="http://www.yangak.com/new/img/top/logo_new.jpg"></a>
 			</div>
-							<a id="mobilemenu" class="test111"><i class="fas fa-align-justify"></i></a>
 			
+				<a href="javascript:void(0);"  id="mobilemenu" class="test111 h-menu" >
+                    <div class="bar1 mot2"></div>
+                    <div class="bar2 mot2"></div>
+                    <div class="bar3 mot2"></div>
+                </a>
+                
+			 
 			<ul class="theory">
 				<li class="root"><a class="rootA" href="http://www.yangak.com/new/intro/index.php">베스티안치과</a>
 					<div class="uberSection">
@@ -127,8 +130,8 @@
 								</li>
 								<li class="uberColumn">
 									<ul>
-											<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-											<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -165,8 +168,6 @@
 												<li><a href="/new/community/index.php">리얼 스토리</a></li>												
 									</ul>
 								</li>
-											
-
 							</ul>
 						</div></li>
 				<li class="root"><a class="rootA" href="http://www.yangak.com/new/implant01/index1.php">프로그램안내</a>
@@ -192,8 +193,8 @@
 								</li>
 								<li class="uberColumn">
 									<ul>
-											<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-											<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -258,8 +259,8 @@
 								</li>
 								<li class="uberColumn">
 									<ul>
-											<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-											<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -324,8 +325,8 @@
 								</li>
 								<li class="uberColumn">
 									<ul>
-											<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-											<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -390,8 +391,8 @@
 								</li>
 								<li class="uberColumn">
 									<ul>
-											<li><a href="http://www.yangak.com/new/yangak/index.php">학생검진</a></li>
-											<li><a href="http://www.yangak.com/new/yangak/index1.php">이민/유학검진</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index.php">베스티안 양악수술</a></li>
+											<li><a href="http://www.yangak.com/new/yangak/index1.php">BOY SYSTEM</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index2.php">베스티안 선수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index3.php">미니V라인수술</a></li>
 											<li><a href="http://www.yangak.com/new/yangak/index4.php">증상별 클리닉</a></li>
@@ -521,23 +522,20 @@
 
 									</ul>
 								</li>
-								
 								<li class="uberColumn">
 									<ul>
-												<li><a href="/new/bbs/board.php?bo_table=news">베스티안 공지사항</a></li>
-												<li><a href="/new/bbs/board.php?bo_table=report">베스티안 언론보도</a></li>
-												<li><a href="/new/bbs/board.php?bo_table=guest">베스티안 칼럼</a></li>
-												<li><a href="/new/bbs/board.php?bo_table=hugi">진료후기</a></li>
-												<li><a href="/new/community/index2.php">Before&After</a></li>
-												<li><a href="/new/community/index.php">리얼 스토리</a></li>
+											<li><a href="http://www.yangak.com/new/bbs/board.php?bo_table=news">베스티안 공지사항</a></li>
+											<li><a href="http://www.yangak.com/new/bbs/board.php?bo_table=report">베스티안 언론보도</a></li>
+											<li><a href="http://www.yangak.com/new/bbs/board.php?bo_table=guest">베스티안 칼럼</a></li>
+											<li><a href="http://www.yangak.com/new/bbs/board.php?bo_table=hugi">진료후기</a></li>
+											<li><a href="http://www.yangak.com/new/community/index2.php">Before&After</a></li>
+											<li><a href="http://www.yangak.com/new/community/index.php">리얼 스토리</a></li>
 									</ul>
 								</li>
-								
-
 							</ul>
 				</div></li>
 			</ul>
 		</div> 
 	</nav>
-
+</div>
 </html>

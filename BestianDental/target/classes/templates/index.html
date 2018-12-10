@@ -12,7 +12,7 @@
 			<div class ="imageBarWrap">
 				<div class ="bar title"></div>
 			</div>
-			
+			 
 			<div class ="imageContentWrap">			
 					<div class ="visual_img title target">  
 						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
@@ -28,7 +28,7 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/textbox.png"></div>
 				</div>
 			</div>
 		</li>
@@ -57,9 +57,9 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div>
-			<!-- 		<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div>
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div> -->
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text_1.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text_2.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text_3.png"></div>
 				</div>
 			</div>
 		</li>
@@ -74,11 +74,11 @@
 			
 			<div class ="imageContentWrap">			
 					<div class ="visual_img title target">  
-						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel3/title.png"></div>
 					</div>
 					 
 					<div class ="visual_img sub target">
-						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+						<div class =imageWrap><img alt="" src="/img/main/carocel3/sub.png"></div>
 					</div>  
 						</div>		
 					<div> 
@@ -87,7 +87,7 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel3/text.png"></div>
 				</div>
 			</div>
 		</li>
@@ -102,11 +102,11 @@
 			
 			<div class ="imageContentWrap">			
 					<div class ="visual_img title target">  
-						<div class ="imageWrap"><img alt="" src="/img/main/carocel1/title.png"></div>
+						<div class ="imageWrap"><img alt="" src="/img/main/carocel4/title.png"></div>
 					</div>
 					 
 					<div class ="visual_img sub target">
-						<div class =imageWrap><img alt="" src="/img/main/carocel1/sub.png"></div>
+						<div class =imageWrap><img alt="" src="/img/main/carocel4/sub.png"></div>
 					</div>  
 			</div>		
 					<div>
@@ -115,7 +115,7 @@
 			
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
-					<div class ="imageWrap"><img alt="" src="/img/main/carocel1/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel4/text.png"></div>
 				</div>
 			</div>
 		</li>
@@ -200,18 +200,20 @@
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
 			 subWidth = $(".visual_img.sub.target").width(); 		
-
+/* 
 			Carocellayout();
+		     */
+		     
 		    main();
-		    
+		     
 	 });
 	  
 	 
 		
 	 $(window).resize(function() {
-    	
+/*     	
 		Carocellayout();
-		
+		 */
     });
     
 	  
@@ -222,7 +224,7 @@
 			//sub 위치 조정
  			if(FullWidth > 1200){
  				
- 				var $text = $(".visual_imgWrap.text");
+ 				var $text = $(".visual_wrap li.active .visual_imgWrap.text");
  				
 				if(1920> FullWidth && FullWidth  < 1642){ 
 					$text.css("right",-((1642 - FullWidth)/2 + 47)); 
@@ -232,7 +234,8 @@
 					$text.css("right","0"); 
 				}
  			}
- 			
+			
+			
 			//title 위치 조정
 			var barWidth = $(".bar").width();
 			
@@ -271,23 +274,35 @@
 				$bar.width(dif);
 				$initBtn.css("left",dif);
 				
-				if(dif< 203 && dif > 90){
+				console.log("dif ::" + dif);
+				
+				if(dif > 312){
+					
+					console.log("dif 가 312 보다 클 때");
+					
 					$title.width(titleWidth - (243-dif));
 					$sub.width(subWidth -  (243-dif));
 					
 				}else if(dif < 90){
 					
 					console.log("dif 가 90 보다 작을때");
+					
 					$title.width(240);
-					$sub.width(226);
+					$sub.width(226); 
+					
+					$title.width(titleWidth - (243-dif));
+					$sub.width(subWidth -  (243-dif));
 					
 				}else if(dif > 90){
 					
-					console.log("dif 가 90 보다 작을때");
+					console.log("dif 가 90 보다 클때");
+					
+				    $title.width(titleWidth - (243-dif));
+					$sub.width(subWidth -  (243-dif)); 
 					
 					$title.width(348);
-					$sub.width(319);
-				}
+					$sub.width(319); 
+				}  
 				
 			}
 			
@@ -309,7 +324,13 @@
 		    
 		    /* TweenMax.staggerTo($visualWrapLi.eq(0).find(" .title, .sub, .text"), .3, {y: 0, opacity: 1, ease: es_step}, .2); */
 
-		    carocel1($visualWrapLi);
+		    carocel1($visualWrapLi,0);
+		    
+		    
+		    TweenMax.delayedCall(0.5,function(){ 
+			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    
 		      
 		    var visualCrr = {}; 
 		    
@@ -318,64 +339,45 @@
 		            return this.num || 0;
 		        },
 		        set: function (_visualCrr) {
-		        	if(!isNumber(_visualCrr)) {
-		        		throw '';
+		        	
+		        	
+		        	if(_visualCrr < 0){
+		        		_visualCrr =_visualLength -1;
 		        	}
+		        	
+		        	console.log("visualCrr :: " + _visualCrr);
+		        	
+		        	
+		         	if(!isNumber(_visualCrr)) {
+		        		throw '';
+		        	} 
+		         	
 		            _visualCrr = _visualCrr % _visualLength;
 		            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step});
 		            TweenMax.to($visualWrapLi.find(" .title"), .3, {opacity:0,  ease:es_step});
 		            TweenMax.to($visualWrapLi.find(" .sub"), .3, {opacity:0,  ease:es_step});
 		            TweenMax.to($visualWrapLi.find(" .text"), .3, {opacity:0, ease:es_step});
-		             
+		            
 		            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
 		            
 		            if(_visualCrr == 0){
 		            	
-		            	carocel1($visualWrapLi);
-					    
+		              	carocel2($visualWrapLi,_visualCrr);
+		              	
 		            }else if(_visualCrr == 1){
-			            
-					    TweenMax.delayedCall(0.3,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
+		            	
+		                TweenMax.to($visualWrapLi.eq(_visualCrr).find(' .target .visual_img .imageWrap'), .1, {opacity:0, ease:es_step});
+		            	
+		            	carocel2($visualWrapLi,_visualCrr);
 
-					    TweenMax.delayedCall(0.4,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.5,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-					    
 		            	
 		            }else if(_visualCrr == 2){
 			            
-					    TweenMax.delayedCall(0.3,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.4,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.5,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-					    
+		             	carocel1($visualWrapLi,_visualCrr);
+		             	
 		            }else if(_visualCrr == 3){
-			            
-					    TweenMax.delayedCall(0.3,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.4,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.5,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-					    
+		            	
+		             	carocel1($visualWrapLi,_visualCrr);
 					    
 		            }
 
@@ -424,22 +426,45 @@
 		    
 	 } 
 	 
-	 function carocel1($visualWrapLi){
+	 function carocel1($visualWrapLi, _visualCrr){
+		 
 		    TweenMax.delayedCall(0.2,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
 
 		    TweenMax.delayedCall(0.3,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
 		    });
 
 		    TweenMax.delayedCall(0.4,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
 		    
-		    TweenMax.delayedCall(0.5,function(){ 
-			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+	 }
+	 
+	 function carocel2($visualWrapLi, _visualCrr){
+		 
+		    TweenMax.delayedCall(0.2,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
+
+		    TweenMax.delayedCall(0.3,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+		    });
+
+		    TweenMax.delayedCall(0.4,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.8, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    TweenMax.delayedCall(0.5,function(){
+		    	  TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text .imageWrap").eq(0), 0.3, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    TweenMax.delayedCall(0.6,function(){
+		    	  TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text .imageWrap").eq(1), 0.4, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    TweenMax.delayedCall(0.7,function(){
+		    	  TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text .imageWrap").eq(2), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+
 	 }
 	 
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }

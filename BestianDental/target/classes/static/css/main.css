@@ -377,6 +377,7 @@ a:link, a:visited, a:active, a:hover {
     overflow: hidden;
     height: 584px;
     width: 100%;
+    margin-top: 63px;
 }
 
 
@@ -619,10 +620,10 @@ leftTap::after {
 	background-image: url(/img/main/carocel2/back.png);
 }
 .visual_wrap .list3{
-	background-image: url(/img/main/carocel1/main.png);
+	background-image: url(/img/main/carocel3/back.png);
 }
 .visual_wrap .list4{
-	background-image: url(/img/main/carocel1/main.png);
+	background-image: url(/img/main/carocel4/back.png);
 }
 
 
@@ -725,6 +726,20 @@ select, input, button, textarea {
     height: 43px;
     width: 578px;
     opacity: 0;
+}
+
+
+.list2 .visual_imgWrap.text.target .visual_img {
+    left: 10%;
+    /* margin-right: 20px; */
+}
+
+.visual_imgWrap.text.target {
+    width: 1280px;
+}
+
+.list2 .visual_imgWrap.text.target .visual_img .imageWrap {
+	padding-right: 23px;
 }
 
 
@@ -990,11 +1005,6 @@ select, input, button, textarea {
 	div.visual_img.sub{
 	    top: 64%;
 	}
-	
-	
-	
-	
-
 }
 @media screen and (max-width:400px) {
 

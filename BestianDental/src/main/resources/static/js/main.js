@@ -62,6 +62,17 @@
 		    $('html').css('overflow-y','auto');
 		});
 		
+		$(".headerDoor").mouseover(function(){
+			if(!$(".bannerBox").hasClass("active")){
+				$(".bannerBox").addClass("active");
+			}
+		})
+		
+		$(".headerDoor").mouseleave (function(){
+			if($(".bannerBox").hasClass("active")){
+				$(".bannerBox").removeClass("active");
+			}
+		})
 	});
 	 
 	$(window).resize(function() {

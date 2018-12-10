@@ -125,10 +125,10 @@ ul.menuSet {
  	padding: 3px 3px;
  	margin: 18.5px 16.5px 13.5px;
  	font-weight: 700;
- 	font-size: 1.21em;
+ 	font-size: 20px;
  	text-align: right;
- 	background-color: #ececec;
- 	color: black;
+ 	background-color: #F3F3F3;
+ 	color: #1E243F;
  	border-bottom: 0px solid #111;
  	text-shadow: 0 0px 0px rgba(0,0,0,.5);
  	border-top: 0px solid #313131;
@@ -166,8 +166,8 @@ ul.menuSet {
 }
 
 .sidebarMenu ul.innerUl {
-	padding-bottom:17.5px;
-	padding-top:8px;
+	padding-bottom: 17px;
+	padding-top: 7px;
 }
 
 .sidebarMenu ul.innerUl li {
@@ -175,8 +175,8 @@ ul.menuSet {
 }
 
 .sidebarMenu ul.innerUl li a {
-	color: #000;
-	font-size:14px;
+	color: #1E243F;
+	font-size: 13px;
 	letter-spacing: -1;
 	line-height: 14px;
 	padding: 6.5px 25px 8.5px 47px;
@@ -330,7 +330,7 @@ line-height: 62px;
 	
 color: #444;
 	
-font-size: 16px;
+font-size: 14px;
 	
 font-weight: 600;
 	
@@ -345,12 +345,12 @@ nav ul.theory li:hover > ul.dropmenu {
 
 nav  ul.theory li > a {
 	display: inline-block;
-	color: #666;
+	color: #000;
 	text-align: left;
-	padding: 0 11px;
+	padding: 0 14px;
 	text-decoration: none;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 13px;
+	font-weight: 500;
 	letter-spacing: -1px;
 }
 
@@ -401,27 +401,9 @@ height: 75px;
 	
 }
 
-nav  ul.theory li.root div.uberSection , nav  ul.theory li.uber div.uberSection  {
-display: none;
-width:100% !important;	
-padding:0;
-position: absolute;
-height:350px;	
-background-color: white;	
-left: 0;
-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-z-index: 99991;
+nav  ul.theory li.root div.uberSection , nav  ul.theory li.uber div.uberSection  {display: none;width:100% !important;padding:0;position: absolute;height: 240px;background-color: #FBFBFB;left: 0;box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);z-index: 99991;}
 
-}
-
-.uberSection ul.uberMenu {
-/* width:750px; */
-width: 900px;
-position:absolute;
-background:white;
-float: left;	
-padding: 10px 0;
-}
+.uberSection ul.uberMenu {/* width:750px; */width: 900px;/* position:absolute; */background: #FBFBFB;margin: 0 auto;/* float: left; */height: 280px;/* margin-left: 188px; */TEXT-ALIGN: CENTER;padding: 19px 0;}
 
 .uberSection ul.uberMenu li.uberColumn {width: 150px;display: block;float: left;}
 
@@ -430,12 +412,22 @@ ul.uberMenu li.uberColumn ul {
 
 ul.uberMenu li.uberColumn ul > li {
 
+/* color: #1E243F; */
 
+/* min-width: 120px; */
 }
 
 ul.uberMenu li.uberColumn ul > li  > a {
 
-padding: 6px 0;
+font-size: 13px;
+
+padding: 3px 0;
+
+color: #1E243F;
+
+font-weight: 500;
+
+line-height: 28px;
 }
 
 ul.uberMenu li.uberColumn ul > li p.uberHeader {
@@ -448,11 +440,15 @@ ul.uberMenu li.uberColumn ul > li p.uberHeader {
 
 
 nav .brandLogo {
-    float: left;
+    /* float: left; */
+    /* display: none; */
     height: 46px;
+    width: 170px;
     padding-top: 10px;
+    position: absolute;
     /* margin-bottom: 20px; */
-    margin-right: 20px;
+    left: -160px;
+    /* margin-right: 20px; */
 }
 
 nav .brandLogo a {
@@ -477,54 +473,46 @@ nav {
 
 
 .bannerBox{
-	    height: 62px;
+	    height: 63px;
 	    position: relative;
+	    overflow: hidden;
+	    /* text-align: center; */
+	    /* float: left; */
+}
+
+.uberSection {
+    background-color: #FBFBFB;
+}
+
+ul.uberMenu li.uberColumn ul > li:hover > a {
+    color: #F7A8A8;
+}
+.bannerBox.mot2.active {
+    height: 300px;
 }
 
 
+.mot2 {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}	
 
+.sidebarMenu ul.innerUl li:hover a {
+    color: #F7A8A8;
+}
 
-@media screen and (min-width:1200px) {
-	nav ul.theory li.uber div.uberSection , nav ul.theory li.root div.uberSection {
-		width:1110px;
-	}
+.bannerWrap {
+    z-index: 100;
+    position: absolute;
+    width: 100%; 
+    background-color: #fff;
 }
 
 
-@media screen and (max-width:1199px) {
-	nav div.userBehavior {
-		display:none;
-		width:0;
-	}
-	
-
-}
-
-@media screen and (min-width:992px)  and (max-width:1199px)  {
-	
-	.uberSection ul.uberMenu li.uberColumn {
-		width:130px;
-	}
-	nav .brandLogo {
-		margin-right:20px;
-		width:130px;
-	}
-	nav .brandLogo a > img {
-		width:100%;
-		height:auto;
-		padding-top:5.5px;
-	}
-	
-	nav ul.theory li {
-		min-width:130px;
-	}
-}
-
-	
-
-@media screen and (max-width:991px) {
-	
-	
+@media screen and (max-width:1290px) {
 	.sidebarMenu {
 	    top: 102px;
 	}
@@ -536,8 +524,7 @@ nav {
 		top: 102px;
 	}
 	
-	
-/*  */	
+	/*  */	
 #mobilemenu {
 	width: 20px;
 	position: absolute;
@@ -585,21 +572,15 @@ nav {
 .h-menu.active div {
 	position: absolute;
 }
-.mot2 {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}	
 	header {
 		display:none;
 	}
 	
+
 nav .brandLogo {
     height: 62px;
     position: absolute;
-    left: calc(50% - 85px);
+    left: 10px;
     float: none;
     padding: 4px 0;
 }
@@ -608,6 +589,54 @@ nav {
 	padding-top: 6px;
 	padding-bottom: 4px;
 }
+	
+	
+}
+
+
+@media screen and (min-width:1200px) {
+	nav ul.theory li.uber div.uberSection , nav ul.theory li.root div.uberSection {
+		width:1110px;
+	}
+}
+
+
+@media screen and (max-width:1199px) {
+	nav div.userBehavior {
+		display:none;
+		width:0;
+	}
+	
+
+}
+
+@media screen and (min-width:992px)  and (max-width:1199px)  {
+	
+	.uberSection ul.uberMenu li.uberColumn {
+		width:130px;
+	}
+/* 	nav .brandLogo {
+		margin-right:20px;
+		width:130px;
+	}
+ */	nav .brandLogo a > img {
+		width:100%;
+		height:auto;
+		padding-top:5.5px;
+	}
+	
+	nav ul.theory li {
+		min-width:130px;
+	}
+}
+
+	
+
+@media screen and (max-width:991px) {
+	
+	
+	
+	
 }
 
 
@@ -664,10 +693,24 @@ nav {
     content: '';
     display: block;
     clear: both;
-}
+} 
 
 .container{
 	margin: 0 auto;
+}
+
+
+.banner-container {
+    margin: 0 auto;
+    max-width: 900px;
+    height: 62px;
+    position: relative;
+}
+
+.uberwrap {
+    width: 900px;
+    margin: 0 auto;
+    height: 240px;
 }
 
 @media only screen and (max-height: 1983px) {

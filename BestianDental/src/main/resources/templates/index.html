@@ -58,6 +58,8 @@
 			<div class ="visual_imgWrap text target">
 				<div class ="visual_img">
 					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div>
+			<!-- 		<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div>
+					<div class ="imageWrap"><img alt="" src="/img/main/carocel2/text.png"></div> -->
 				</div>
 			</div>
 		</li>
@@ -212,7 +214,6 @@
 		
     });
     
-	 
 	  
 	 function Carocellayout(){
 		 
@@ -308,22 +309,8 @@
 		    
 		    /* TweenMax.staggerTo($visualWrapLi.eq(0).find(" .title, .sub, .text"), .3, {y: 0, opacity: 1, ease: es_step}, .2); */
 
-		    TweenMax.delayedCall(0.2,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-		    });
-
-		    TweenMax.delayedCall(0.3,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-		    });
-
-		    TweenMax.delayedCall(0.4,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-		    });
-		    
-		    TweenMax.delayedCall(0.5,function(){ 
-			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-		    });
-		     
+		    carocel1($visualWrapLi);
+		      
 		    var visualCrr = {}; 
 		    
 		    Object.defineProperty(visualCrr, 'number', {
@@ -336,24 +323,17 @@
 		        	}
 		            _visualCrr = _visualCrr % _visualLength;
 		            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step});
-		            
+		            TweenMax.to($visualWrapLi.find(" .title"), .3, {opacity:0,  ease:es_step});
+		            TweenMax.to($visualWrapLi.find(" .sub"), .3, {opacity:0,  ease:es_step});
+		            TweenMax.to($visualWrapLi.find(" .text"), .3, {opacity:0, ease:es_step});
+		             
 		            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {opacity:1, display:"block", ease:es_step});
 		            
-		            if(_visualCrr == 1){
-			            
-					    TweenMax.delayedCall(0.3,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.4,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
-					    });
-
-					    TweenMax.delayedCall(0.5,function(){
-						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
-					    });
+		            if(_visualCrr == 0){
+		            	
+		            	carocel1($visualWrapLi);
 					    
-		            }else if(_visualCrr == 2){
+		            }else if(_visualCrr == 1){
 			            
 					    TweenMax.delayedCall(0.3,function(){
 						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
@@ -368,7 +348,7 @@
 					    });
 					    
 		            	
-		            }else if(_visualCrr == 3){
+		            }else if(_visualCrr == 2){
 			            
 					    TweenMax.delayedCall(0.3,function(){
 						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
@@ -382,7 +362,7 @@
 						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 					    });
 					    
-		            }else if(_visualCrr == 4){
+		            }else if(_visualCrr == 3){
 			            
 					    TweenMax.delayedCall(0.3,function(){
 						    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
@@ -407,6 +387,7 @@
 		            
 		            this.num = _visualCrr;
 		        }
+		         
 		    });
 
 		    $indiBtn.find("button").click(function () {
@@ -420,6 +401,8 @@
 		    var x;
 		    var x2;
 		    
+		    
+		
 		    $mainVisual.mousedown(function(event){
 		  		   x = event.pageX;
 		    });
@@ -440,6 +423,24 @@
 		    
 		    
 	 } 
+	 
+	 function carocel1($visualWrapLi){
+		    TweenMax.delayedCall(0.2,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+
+		    TweenMax.delayedCall(0.3,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+		    });
+
+		    TweenMax.delayedCall(0.4,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(0).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    
+		    TweenMax.delayedCall(0.5,function(){ 
+			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+	 }
 	 
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 		

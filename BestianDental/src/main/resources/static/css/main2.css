@@ -106,7 +106,7 @@
 
 .halfText:first-of-type {
 	border-bottom: 1px solid #ddd;
-	background: #0e2338;
+	background: #091931;
 	position: relative;
 }
 
@@ -175,7 +175,7 @@ h2.textRight.top {
 .smallBox.second {
 	height: 122px;
     padding: 13px;
-    background: #0e2338;
+    background: #091931;
 }
 
 .smallBox {
@@ -302,6 +302,56 @@ div.container.appear {
 
 .smallH2.textRight {
 	text-align: right;
+}
+
+.footerFoot {
+	padding: 30px 0;
+}
+
+img.logo {
+	float: left;
+	margin-bottom: 36px;
+}
+
+.footerInfo {
+	display: block;
+}
+
+.footerNav a {
+	margin-right: 20px;
+	color: #404040;
+	font-size: 13px;
+}
+
+.footerNav a:hover {
+	color: #929292;
+}
+
+.footerNav {
+	margin-bottom: 0;
+}
+
+.footerInfo {
+	
+}
+
+.footerInfo:first-of-type {
+	color: #b7b5b5;
+	font-size: 13px;
+}
+
+.footerInfo:last-of-type {
+	color: #404040;
+	letter-spacing: 1.2px;
+	font-size: 11px;
+}
+
+.footerMobile {
+	display: none;
+}
+
+.halfText.white {
+	background: #FBFBFB;
 }
 
 
@@ -554,6 +604,44 @@ div.container.appear {
 	
 	h2.smallH2 {
 		font-size: 17px;
+	}
+	
+	img.logo {
+		margin: 0 0 10px 10px;
+		float: inherit;
+	}
+	
+	.footerNav {
+		display: none;
+	}
+	
+	.footerInfo {
+		margin: 10px 10px 0;
+	}
+	
+	.footerInfo:last-of-type {
+		margin-bottom: 20px;
+	}
+	
+	.footerMobile {
+		display: block;
+	}
+	
+	.mobileNav {
+		margin: 0 10px;
+	}
+	
+	.mobileNav a{
+	    display: inline-block;
+    	float: left;
+   	    margin: 0 10px 10px 0;
+		border: 1px solid #b7b5b5;
+		padding: 7px;
+		color: #404040;
+	}
+	
+	.mobileNav a:hover {
+		color: #929292;
 	}
 }
 

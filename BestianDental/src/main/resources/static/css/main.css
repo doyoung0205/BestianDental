@@ -608,7 +608,7 @@ leftTap::after {
     overflow: hidden;
     height: 300px;
     position: absolute;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -748,11 +748,10 @@ select, input, button, textarea {
 }
 
 #mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img img{
-    height: 100%;
 }
 
 #mainVisual > ul.visual_wrap > li.list3 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
-    top: 72%;
+    top: 67%;
 }
 #mainVisual > ul.visual_wrap > li.list4 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
     top: 70%;
@@ -934,6 +933,9 @@ select, input, button, textarea {
 	}
 	
 	
+	#mainVisual > ul.visual_wrap > li.list1 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
+	    top: 64%;
+	}
 	
 /* 	.visual_img.title img{
 		width: 300px;
@@ -947,7 +949,18 @@ select, input, button, textarea {
 	.visual_img.sub{
 	    top: 57%;
 	}
-			
+	
+	#mainVisual > ul.visual_wrap > li.list3 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
+		top: 57%;
+	}
+	#mainVisual > ul.visual_wrap > li.list3 > div.leftTap > div.imageContentWrap > div.visual_img.title.target{
+		top: 12%;
+	}
+	
+	li.list3 > div.leftTap .bar {
+	    margin-top: 36px;
+	}
+				
 	
 /* 	div.visual_img.title {
 	    top: 20%;

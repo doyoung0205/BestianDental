@@ -416,11 +416,12 @@
 					
 				}else if(_visualCrr ==1){
 					$title.width(280);
-					$sub.width(270);
+					$sub.width(480);
 					
 				}else if(_visualCrr ==2){
 					$title.width(280);
-					$sub.width(270);
+					$sub.width(225);
+					$textImg.width(270);
 				}else if(_visualCrr ==3){
 					$title.width(385);
 					$sub.width(257);
@@ -435,15 +436,23 @@
 				console.log("1264 보다 작을 떄" );
 				
  				if(_visualCrr ==2){
-					$text.css("left",dif2 +10); 
+ 					if(FullWidth > 539){
+						$text.css("left",dif2 +10);
+ 						
+ 					}else{
+ 						$text.css("left",dif);
+ 					}
+					
 				} 
-				
- 				if(dif2 <430 && dif2> 294.5){
+ 				
+				 if(dif2 <430 && dif2> 294.5){
  					
  					if(_visualCrr ==0){
  						
- 						$title.width(321 - (430- dif2)/4);
- 						$sub.width(321 - (430 - dif2)/4);
+ 						console.log("321 - ((430- dif2)/4 + 95.5)  =  "+( 321 - ((430- dif2)/4 + 95.5)))
+ 						
+ 						$title.width(321 - ((430- dif2)/4 + 95.5));
+ 						$sub.width(321 - ((430- dif2)/4 + 76.5));
  						
  					}else if(_visualCrr ==1){
  						
@@ -453,7 +462,7 @@
  					}else if(_visualCrr ==2){
  						
  						$title.width(280 - (430- dif2)/3);
- 						$sub.width(270 - (430 - dif2)/3);
+ 						$sub.width(270 - (430 - dif2)/2);
  						$textImg.width(270 - (430 - dif2)/3);
  						
  					}else if(_visualCrr ==3){
@@ -471,11 +480,11 @@
  						
  					}else if(_visualCrr ==1){
  						$title.width(280);
- 						$sub.width(270);
+ 						$sub.width(480);
  						
  					}else if(_visualCrr ==2){
  						$title.width(280);
- 						$sub.width(270);
+ 						$sub.width(225);
  						$textImg.width(270);
  						
  					}else if(_visualCrr ==3){
@@ -493,12 +502,12 @@
  					}else if(_visualCrr ==1){
  						
  						$title.width(215);
- 						$sub.width(219);
+ 						$sub.width(300);
  						
  					}else if(_visualCrr ==2){
  						$title.width(205);
- 						$sub.width(170);
- 						$textImg.width(170);
+ 						$sub.width(130);
+ 						$textImg.width(200);
  						
  					}else if(_visualCrr ==3){
  						$title.width(290);
@@ -513,14 +522,11 @@
 				
 				/* _visualCrr; */
 				
-				/* 크기조절 */
-			
-				
-				
 			}
 			
 			var titleTargetH =$title.height()/2-0.1;			
 			$bar.height(titleTargetH);
+			
 	 }
 	 
 	 

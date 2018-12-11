@@ -446,7 +446,11 @@
  						$text.css("left",dif);
  					}
 					
-				} 
+				}else if(_visualCrr ==1){
+					
+					$text.css("left",dif);
+					
+				}
  				
 				 if(dif2 <430 && dif2> 294.5){
  					
@@ -459,13 +463,13 @@
  						
  					}else if(_visualCrr ==1){
  						
- 						$title.width(321 - (430- dif2)/4);
+ 						$title.width(230);
  						$sub.width(321 - (430 - dif2)/4);
  						
  					}else if(_visualCrr ==2){
  						
  						$title.width(280 - (430- dif2)/3);
- 						$sub.width(270 - (430 - dif2)/2);
+ 						$sub.width(250 - (430 - dif2)/2);
  						$textImg.width(270 - (430 - dif2)/3);
  						
  					}else if(_visualCrr ==3){
@@ -477,13 +481,22 @@
  					
  				}else if(dif2> 430){
  					
+ 					console.log("dif2> 430")
+ 					
  					if(_visualCrr ==0){
  						$title.width(280);
  						$sub.width(270);
  						
  					}else if(_visualCrr ==1){
- 						$title.width(280);
- 						$sub.width(480);
+					var dif2a = $(".rightBox .semiBox.after").offset().left;
+ 						
+ 						if(dif2a >= 294.5 && dif2a <= 635.5){
+ 							$title.width(230);
+ 	 						$sub.width(350);
+ 						}else{
+ 							$title.width(280);
+ 	 						$sub.width(480);
+ 						}
  						
  					}else if(_visualCrr ==2){
  						$title.width(280);
@@ -504,13 +517,21 @@
  						
  					}else if(_visualCrr ==1){
  						
- 						$title.width(215);
- 						$sub.width(300);
+					var dif2b = $(".rightBox .semiBox.after").offset().left;
+ 						
+ 						if(dif2b >= 294.5 && dif2b <= 635.5){
+ 							$title.width(230);
+ 	 						$sub.width(350);
+ 						}else{
+	 						$title.width(215);
+ 							$sub.width(300);
+ 						}
  						
  					}else if(_visualCrr ==2){
- 						$title.width(205);
- 						$sub.width(130);
- 						$textImg.width(200);
+ 						
+	 						$title.width(205);
+	 						$sub.width(130);
+	 						$textImg.width(200);
  						
  					}else if(_visualCrr ==3){
  						$title.width(290);
@@ -543,10 +564,7 @@
 		    
 		    var $indiBtn = $mainVisual.find("#indiBtn");
 		    
-		    /* TweenMax.staggerTo($visualWrapLi.eq(0).find(" .title, .sub, .text"), .3, {y: 0, opacity: 1, ease: es_step}, .2); */
-
 		    carocel1($visualWrapLi,0);
-		    
 		    
 		    TweenMax.delayedCall(0.5,function(){ 
 			    TweenMax.fromTo($("#indiBtn"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
@@ -577,9 +595,6 @@
 		            TweenMax.to($visualWrapLi.find(" .text"), .3, {opacity:0, ease:es_step});
 		            TweenMax.to($visualWrapLi, .3, {opacity:0, ease:es_step});
 		            
-/* 		            TweenMax.to($visualWrapLi, .3, {opacity:0, display:"none", ease:es_step}); */
-/* 		            TweenMax.to($visualWrapLi.eq(_visualCrr), .3, {display:"block", ease:es_step}); */
-		       
 		            /* 위치 와 크기 조절 */
 		            
 		            visualModule(_visualCrr);
@@ -626,10 +641,10 @@
 		    });
 		    
 		    
-		    var x;
+/* 		    var x;
 		    var x2;
 		
-/* 		    $mainVisual.mousedown(function(event){
+ 		    $mainVisual.mousedown(function(event){
 		  		   x = event.pageX;
 		    });
 		    
@@ -637,6 +652,7 @@
 		  		   x2 = event.pageX;
 		  		 	var dif = x2-x;
 		  		 	x = null;
+		  		 	x2 = null;
 		  		 	
 		    	   if((dif) > 50){
 		    		   visualCrr.number--;
@@ -644,7 +660,7 @@
 		    	   }else if((dif) < -50){
 		    		   visualCrr.number++;
 		    	   }
-		    }); */
+		    });  */
 		    
 		    
 	 } 

@@ -729,7 +729,6 @@ select, input, button, textarea {
     opacity: 0;
 }
 
-
 .list2 .visual_imgWrap.text.target .visual_img {
     left: 10%;
     /* margin-right: 20px; */
@@ -746,9 +745,6 @@ select, input, button, textarea {
 #mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img {
     position: relative;
     margin-top: 7px;
-}
-
-#mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img img{
 }
 
 #mainVisual > ul.visual_wrap > li.list3 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
@@ -768,14 +764,25 @@ select, input, button, textarea {
 	.visual_wrap .list1{
 		background-image: url(/img/main/carocel1/main_m.png);
 	}
-	.visual_wrap .list2{
-		background-image: url(/img/main/carocel2/main_s.png);
-	}
 	
+	.list2 .visual_imgWrap.text.target .visual_img{
+		left: auto;
+		/* width: 380px; */
+	}
+	.list2 .visual_imgWrap.text.target{
+		display: block;
+		bottom: 8%;
+		height: 141px;
+		width: 300px;
+	}
 	.list3 .visual_imgWrap.text.target{
 		display: block;
 	    bottom: 0px;
 	}
+	#mainVisual > ul.visual_wrap > li.list2 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
+	    top: 46%;
+	}
+	
 	
 
 /* 
@@ -838,7 +845,7 @@ select, input, button, textarea {
 	}
 	
 	#mainVisual #indiBtn {
-	    bottom: 17%;
+	    bottom: 3%;
 	}
 	
 	/* 카카오라인 */
@@ -931,6 +938,12 @@ select, input, button, textarea {
 	    min-height: 230px;
 	}
 	
+}
+
+@media screen and (max-width:850px) {
+	div.visual_wrap .list2{
+		background-image: url(/img/main/carocel2/main_s.png);
+	}
 }
 
 @media screen and (max-width:815px) {
@@ -1042,11 +1055,20 @@ select, input, button, textarea {
 		top: 28%;
 		/* left: -26px; */
 	}
+	
+	.list2 .visual_imgWrap.text.target{
+		bottom: 5%;
+	}
+	
 	.bar {
 	    margin-top: 84px;
 	}
 	div.visual_img.sub{
 	    top: 64%;
+	}
+	
+	#mainVisual > ul.visual_wrap > li.list2 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target {
+    		top: 62%;
 	}
 }
 @media screen and (max-width:400px) {

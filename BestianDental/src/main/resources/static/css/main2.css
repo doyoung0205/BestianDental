@@ -1,3 +1,9 @@
+div:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
 .menuBox {
     width: 25%;
     height: 610px;
@@ -39,17 +45,18 @@
 	/* border-top-width: 35px;
     border-top-color: #5f6167; */
     background-image: url(/img/main2/doctor.png);
+    background-repeat: no-repeat;
     background-color: #f3f1f1;    
     opacity: 1;	
 }
 
 .quick {
-    width: 9%;
-    height: 305px;
+    width: 171px;
+    height: 278px;
     position: absolute;
-    top: 926px;
-    right: 110px;
-	box-shadow: 4px 3px 7px 0 #ddd;
+    top: 927px;
+    right: 100px;
+	box-shadow: 1px 2px 7px 0 #ccc;
 }
 
 .menuText {
@@ -87,7 +94,7 @@
 	font-size: 26px;
 	font-weight: bold;
     letter-spacing: -0.4px;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 .menuBox.halfBox h2 {
@@ -96,11 +103,11 @@
 
 .menuBox.halfBox {
     margin-bottom: 0;	
-	box-shadow: 4px 3px 7px 0 #ddd;
+	box-shadow: 4px 3px 7px 0 #ccc;
 }
 
 .halfText {
-	height: 305px;
+	height: 255px;
 	position: relative;
 }
 
@@ -119,13 +126,17 @@ h2.textRight {
 	float: right;
 }
 
+h2.textRight.days {
+	margin: 30px 0 0 30px;
+}
+
 
 h2.halfCall {
     font-size: 40px;
     letter-spacing: 1.4px;
     font-weight: 550;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     right: 5%;
     left: 8%;
 }
@@ -151,21 +162,21 @@ h2.halfCall {
 	display: inline-block;
 	float: left;
 	position: absolute;
-    bottom: 13%;
+    bottom: 17%;
     left: 6%;
 }
 
 h2.textRight.top {
 	position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     right: 5%;
 }
 
 .smallBox.first {
     background: #F45858;
-    padding: 15px;
+    padding: 13px;
     text-align: center;
-    height: 61px;
+    height: 40px;
 }
 
 .smallBox.first h2, .smallBox.second h2 {
@@ -173,14 +184,14 @@ h2.textRight.top {
 }
 
 .smallBox.second {
-	height: 122px;
+	height: 80px;
     padding: 13px;
     background: #091931;
 }
 
 .smallBox {
 	display: table;
-	width: 171px;	
+	width: 145px;	
 }
 
 .contentBox {
@@ -189,7 +200,7 @@ h2.textRight.top {
 }
 
 .smallBox.second h2 {
-	margin-top: 10px;
+	margin-top: 3px;
 }
 
 .smallBox  h2 {
@@ -203,19 +214,19 @@ h2.textRight.top {
 .smallBox.third {
 	padding: 13px;
 	background: #FFE600;
-	height: 122px;
+	height: 80px;
 }
 
 .smallBox.third h2 {
-	margin-top: 14px;
+	margin-top: 10px;
 }
 
-h2.bigText {
+.mainMenu h2.bigText {
 	font-size: 30px;
 }
 
 img.barImg {
-	margin-top: 30px;
+	margin-top: 20px;
 	float: right;
 }
 
@@ -257,7 +268,7 @@ img.barImg {
 .halfBox.appear.first {
 	background-image: url(/img/main2/line-face.png);
     background-color: #5f6167;
-    background-size: 357px;
+    background-size: 100%;
 }
 
 .halfBox.appear.second {
@@ -283,8 +294,8 @@ img.barImg {
 
 .nameText {
     position: absolute;
-    bottom: 0;
-    right: 10%;
+    bottom: 10%;
+    right: 6%;
     font-size: 22px;	
 }
 
@@ -302,6 +313,7 @@ div.container.appear {
 
 .smallH2.textRight {
 	text-align: right;
+	margin-top: 0;
 }
 
 .footerFoot {
@@ -354,6 +366,15 @@ img.logo {
 	background: #FBFBFB;
 }
 
+.contentBox h2 {
+	cursor: pointer;
+}
+
+.menuBox.first {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
 
 @media (min-width: 1200px) {
 	div.container {
@@ -369,17 +390,21 @@ img.logo {
 
 @media screen and (max-width: 1366px) {
 	
+	h2.textRight.days {
+		margin: 30px 0 0;
+	}
+	
 	div.container {
 	    width: 100%;
 	    padding: 0;
 	}
 	
 	.halfText h2.halfCall {
-		font-size: 27px;
+		font-size: 28px;
 	}
 	
 	.mainMenu h2 {
-		font-size: 20px;
+		font-size: 23px;
 	}
 	
 	.textRight.halfCall.time {
@@ -387,7 +412,7 @@ img.logo {
 	}
 	
 	.iconImg {
-		width: 40px;
+		width: 50px;
 	}
 	
 	.menuBox {
@@ -396,11 +421,11 @@ img.logo {
 	}
 	
 	.halfText {
-		height: 260px;
+		height: 220px;
 	}
 	
 	.menuBox.second {
-		background-size: 337px 536px;
+		background-size: 315px 530px;
 		border-top-width: 10px;
 		
 	}
@@ -414,7 +439,8 @@ img.logo {
 	}
 	
 	img.barImg {
-		margin-top: 32px;
+		margin-top: 16px;
+	    width: 30px;
 	}
 	
 	.menuText, .halfText {
@@ -429,7 +455,7 @@ img.logo {
 		left: 15px;
 	} */
 	
-	h2.bigText {
+	.mainMenu h2.bigText {
 		font-size: 25px;
 	}
 	
@@ -437,6 +463,20 @@ img.logo {
 		padding: 20px;
 	}
 	
+}
+
+@media screen and (max-width: 1149px) {
+	.mainMenu h2 {
+		font-size: 20px;
+	}
+	
+	.halfText h2.halfCall {
+		font-size: 25px;
+	}
+	
+	.mainMenu h2.bigText {
+		font-size: 23px;
+	}
 }
 
 @media screen and (min-width: 851px) and (max-width: 1050px){
@@ -458,8 +498,23 @@ img.logo {
 		font-size: 22px;
 	}
 	
-	h2.bigText {
+	.mainMenu h2.bigText {
 		font-size: 22px;
+	}
+	
+	.iconImg {
+		width: 40px;
+	}
+}
+
+@media screen and (max-width: 909px) {
+	
+	.menuBox {
+		height: 480px;
+	}
+	
+	.halfText {
+		height: 200px;
 	}
 }
 
@@ -468,16 +523,26 @@ img.logo {
 		margin-top: 0;
 	}
 	
+	img.barImg {
+		width: 20px;
+	}
+	
 	.menuBox {
-		height: 460px;
+		height: 440px;
+	}
+	
+	h2.textRight.top {
+	    bottom: 12%;
+   	 	line-height: 30px;	
 	}
 	
 	.halfText {
-		height: 230px;
+		height: 190px;
+		padding: 10px 20px 20px;
 	}
 	
 	.callImgBox {
-		margin: 15px 10px 0;	
+	
 	}
 	
 	.menuText.first h2 {
@@ -489,8 +554,7 @@ img.logo {
 	}
 	
 	img.barImg {
-		margin-top: 16px;
-	    width: 30px;
+		margin-top: 22px;
 	}
 	
 	.menuText {
@@ -528,7 +592,7 @@ img.logo {
 	}
 	
 	.menuBox.second {
-		background-size: 237px 415px;
+		background-size: 225px 415px;
 	}
 	
 	.menuText, .halfText {
@@ -536,7 +600,7 @@ img.logo {
 	}
 	
 	.halfText {
-		height: 200px;
+		height: 180px;
 	}
 	
 	.menuBox {
@@ -548,6 +612,7 @@ img.logo {
 	
 	div.container.appear {
 		display: block;
+		margin-top: 40px;
 	}
 	
 	.menuBox.first, .menuBox.second 	{
@@ -604,6 +669,8 @@ img.logo {
 	
 	h2.smallH2 {
 		font-size: 17px;
+		line-height: 30px;
+		margin-top: 10px;
 	}
 	
 	img.logo {
@@ -656,7 +723,7 @@ img.logo {
 	}
 	
 	.iconImg {
-		width: 30px;
+		width: 40px;
 	}
 	
 	.halfText {
@@ -672,7 +739,7 @@ img.logo {
 	} */
 	
 	img.barImg {
-	    margin-top: 15px;
+	    margin-top: 23px;
    	 	width: 20px;	
 	}
 	
@@ -681,12 +748,13 @@ img.logo {
 	}
 	
 	.halfText {
-		height: 190px;
+		height: 180px;
 	}
 	
 	.halfBox.appear.second {
 		background-size: 200px 270px;
 	    background-image: url(/img/main2/doc-ss.png);
+	    background-repeat: no-repeat;
 	}
 	
 	h2.smallH2 {

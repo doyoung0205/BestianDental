@@ -266,7 +266,7 @@
 		<div class="halfBox appear first">
 			<div class="redBorder"></div>
 			<div class="halfText first">
-				<h2 style="margin-top: 0;">베스티안<br>B.O.S SYSTEM</h2>
+				<h2 style="margin-top: 0; line-height: 35px;">베스티안<br>B.O.S SYSTEM</h2>
 				<h2 class="smallH2">완전하게<br>아름다워지는<br>양악이 가능한 곳</h2>
 			</div> 
 		</div>
@@ -298,7 +298,7 @@
 			<div class="smallMapBox">
 				<img src="img/main2/map.png" alt=""/>
 			</div>
-				<h2>오시는길</h2>
+				<h2 onclick="location.href='http://www.yangak.com/new/intro/index4.php'">오시는길</h2>
 			</div>
 			</div>
 			
@@ -307,13 +307,12 @@
 				<div class="kakaoBox">
 				<img src="img/main2/kakao.png" alt=""/>
 			</div>
-				<h2>카톡상담</h2>
+				<h2 onclick="location.href='http://www.yangak.com/new/bbs/kakao.php?url=%2Fnew%2F'">카톡상담</h2>
 			</div>
 			</div>
 			
 		</div>
-		
-		
+
 
 </div>
 <!--  end fragment -->
@@ -528,18 +527,17 @@
 	$(window).scroll(function() {
 		
 		var topPosition = $("#quickMenu").offset().top;
-		var scroll = $(window).scrollTop();
+		var scroll = $(window).scrollTop() + 155;
 		
-		if(scroll >= 926) {
 			
 		$("#quickMenu").stop().animate(
 				{top: scroll + "px"}, 
-				{queue: false, duration: 350}
-				, 'slow');
-		}
+				{queue: false,}
+				, 'easeOutQuad');
 		
-		console.log("top: "+top);
-		console.log("topPosition: "+topPosition);
+		
+		/* console.log("top: "+top);
+		console.log("topPosition: "+topPosition); */
 
 		
 	});

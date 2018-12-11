@@ -385,13 +385,16 @@
 			
 			var $text = $(".visual_wrap li .visual_imgWrap.text");
 				
+			$text.css("left","auto");
+			
 			if(1920> FullWidth && FullWidth  < 1642){ 
 				$text.css("right",-((1642 - FullWidth)/2 + 47)); 
 			} else if(FullWidth < 1920){
 				$text.css("right",-(1920 - FullWidth)/6); 
 			}
 		} else{
-			$text.css("right","0"); 
+			$text.css("right","auto"); 
+			 
 		}
 	    
 	    	
@@ -436,9 +439,9 @@
 				console.log("1264 보다 작을 떄" );
 				
  				if(_visualCrr ==2){
+ 					
  					if(FullWidth > 539){
 						$text.css("left",dif2 +10);
- 						
  					}else{
  						$text.css("left",dif);
  					}

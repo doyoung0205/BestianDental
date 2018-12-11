@@ -504,6 +504,7 @@ span.more {
 .leftBox .content h1 {
     margin: 0;
     font-weight: bold;
+    font-size: 30px;
 }
 
 
@@ -852,9 +853,11 @@ select, input, button, textarea {
 	div.cacaoLine span {
 	    color: #ffe600;
 	    font-weight: bold;
+	    font-size: 21px;
 	}
 		
 	.cacaoLine .content h1 b {
+	    font-size: 21px;
 	    margin: 0 126px 0 126px;
 	}	      
 
@@ -1014,7 +1017,7 @@ select, input, button, textarea {
 	}
 		
 	.leftBox .content h1 {
-	    /* font-size: 30px; */
+	    font-size: 21px;
 	}
 	
 	.leftBox .content {

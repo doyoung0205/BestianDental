@@ -744,7 +744,7 @@ select, input, button, textarea {
 }
 
 #mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img {
-    position: initial;
+    position: relative;
     margin-top: 7px;
 }
 
@@ -767,6 +767,9 @@ select, input, button, textarea {
 	
 	.visual_wrap .list1{
 		background-image: url(/img/main/carocel1/main_m.png);
+	}
+	.visual_wrap .list2{
+		background-image: url(/img/main/carocel2/main_s.png);
 	}
 	
 	.list3 .visual_imgWrap.text.target{

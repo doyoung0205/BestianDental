@@ -394,7 +394,7 @@ a:link, a:visited, a:active, a:hover {
     /* min-width: 1180px; */
     position: absolute;
     top: 0;
-    display: none;
+    /* display: none; */
     -webkit-background-size: cover;
     background-size: cover;
     opacity: 0;
@@ -590,7 +590,7 @@ span.more img {
 }
  
 .visual_imgWrap.text .visual_img {
-    right: 0;
+  /*   right: 0; */
 }
 
 .semiBoxWrap {
@@ -742,6 +742,23 @@ select, input, button, textarea {
 	padding-right: 23px;
 }
 
+#mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img {
+    position: initial;
+    margin-top: 7px;
+}
+
+#mainVisual > ul.visual_wrap > li.list3 > div.visual_imgWrap.text.target > .visual_img img{
+    height: 100%;
+}
+
+#mainVisual > ul.visual_wrap > li.list3 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
+    top: 72%;
+}
+#mainVisual > ul.visual_wrap > li.list4 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
+    top: 70%;
+}
+
+
 
 
 /* 반응형 */
@@ -751,6 +768,12 @@ select, input, button, textarea {
 	.visual_wrap .list1{
 		background-image: url(/img/main/carocel1/main_m.png);
 	}
+	
+	.list3 .visual_imgWrap.text.target{
+		display: block;
+	    bottom: 0px;
+	}
+	
 
 /* 
 	.visual_img.title img{
@@ -871,7 +894,8 @@ select, input, button, textarea {
 }
 
 @media screen and (max-width:1015px) {
-
+	
+/* 
 	#mainVisual{
 		height: 285px; 
 	}
@@ -880,7 +904,7 @@ select, input, button, textarea {
 		height: 285px
 	} 
 	
-	
+ */	
 	
 }
 

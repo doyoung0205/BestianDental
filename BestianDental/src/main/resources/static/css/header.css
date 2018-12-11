@@ -20,7 +20,7 @@
 html, body {
 	margin: 0 auto;
 	/* 'Roboto',  */
-	font-family: "Malgun Gothic", "맑은 고딕", 돋움, Dotum, 굴림, Gulim, mal;
+	font-family: "Malgun Gothic", "ë§‘ì€ ê³ ë”•", ë‹ì›€, Dotum, êµ´ë¦¼, Gulim, mal;
 	/* font-family: 'Noto Sans KR', sans-serif; */
 	padding: 0;
 	position: relative;
@@ -304,7 +304,7 @@ nav ul.theory {
 	padding: 0;
 	list-style: none;
 	/* font-family: 'Noto Sans KR', sans-serif; */
-	font-family: "Malgun Gothic", "맑은 고딕", 돋움, Dotum, 굴림, Gulim, mal;
+	font-family: "Malgun Gothic", "ë§‘ì€ ê³ ë”•", ë‹ì›€, Dotum, êµ´ë¦¼, Gulim, mal;
 	height: 62px;
 }
 
@@ -313,9 +313,10 @@ nav ul.theory {
 nav  ul.theory li {
 	
 float:left;
-min-width: 150px;
+	
+/* min-width: 150px; */
+	
 text-align:center;
-
 }
 
 nav  ul.theory li.root {
@@ -328,7 +329,7 @@ height: 96%;
 	
 line-height: 62px;
 	
-color: #444;
+color: #1E243F;
 	
 font-size: 14px;
 	
@@ -345,9 +346,9 @@ nav ul.theory li:hover > ul.dropmenu {
 
 nav  ul.theory li > a {
 	display: inline-block;
-	color: #000;
+	color: #1E243F;
 	text-align: left;
-	padding: 0 14px;
+	padding-left: 76px;
 	text-decoration: none;
 	font-size: 13px;
 	font-weight: 500;
@@ -405,7 +406,7 @@ nav  ul.theory li.root div.uberSection , nav  ul.theory li.uber div.uberSection 
 
 .uberSection ul.uberMenu {/* width:750px; */width: 900px;/* position:absolute; */background: #FBFBFB;margin: 0 auto;/* float: left; */height: 280px;/* margin-left: 188px; */TEXT-ALIGN: CENTER;padding: 19px 0;}
 
-.uberSection ul.uberMenu li.uberColumn {width: 150px;display: block;float: left;}
+.uberSection ul.uberMenu li.uberColumn {width: 130px;display: block;float: left;padding-left: 11px;}
 
 ul.uberMenu li.uberColumn ul {
 }
@@ -419,6 +420,8 @@ ul.uberMenu li.uberColumn ul > li {
 
 ul.uberMenu li.uberColumn ul > li  > a {
 
+letter-spacing: -1;
+	    
 font-size: 13px;
 
 padding: 3px 0;
@@ -478,13 +481,16 @@ nav {
 	    overflow: hidden;
 	    /* text-align: center; */
 	    /* float: left; */
+	    border-top: 1px solid #E6E6E6;
 }
 
 .uberSection {
     background-color: #FBFBFB;
+    border-top: 1px solid #E6E6E6;
 }
 
-ul.uberMenu li.uberColumn ul > li:hover > a {
+ul.uberMenu li.uberColumn ul > li:hover > a, 
+nav ul.theory li.root:hover > a.rootA{
     color: #F7A8A8;
 }
 .bannerBox.mot2.active {
@@ -512,6 +518,40 @@ ul.uberMenu li.uberColumn ul > li:hover > a {
 }
 
 
+.bannerBox.active .liUnder{
+	opacity: 1;
+}
+
+.liUnder{
+    position: absolute;
+    top: 60px;
+    width: 0px;
+    height: 3px;
+    background-color:#F7A8A8;
+    opacity: 0;
+}
+
+.uberSection ul.uberMenu li.uberColumn:nth-child(1) {
+    padding-left: 48px;
+}
+
+.uberSection ul.uberMenu li.uberColumn:nth-child(2) {
+    padding-left: 25px;
+}
+
+.uberSection ul.uberMenu li.uberColumn:nth-child(4) {
+    padding-left: 0px;
+}
+
+.uberSection ul.uberMenu li.uberColumn:nth-child(5) {
+    padding-left: 0px;
+}
+
+.uberSection ul.uberMenu li.uberColumn:nth-child(6) {
+    padding-left: 20px;
+}
+
+/* 반응형 경계선  */
 @media screen and (max-width:1290px) {
 	.sidebarMenu {
 	    top: 102px;
@@ -582,7 +622,6 @@ nav .brandLogo {
     position: absolute;
     left: 10px;
     float: none;
-    padding: 4px 0;
 }
 
 nav {
@@ -622,7 +661,6 @@ nav {
  */	nav .brandLogo a > img {
 		width:100%;
 		height:auto;
-		padding-top:5.5px;
 	}
 	
 	nav ul.theory li {
@@ -703,7 +741,7 @@ nav {
 .banner-container {
     margin: 0 auto;
     max-width: 900px;
-    height: 62px;
+    height: 63px;
     position: relative;
 }
 

@@ -323,7 +323,7 @@ div.container.appear {
 
 img.logo {
 	float: left;
-	margin-bottom: 36px;
+	margin-bottom: 40px;
 }
 
 .footerInfo {
@@ -347,20 +347,22 @@ img.logo {
 }
 
 .footerInfo {
-	font-family: "Nanum Gothic";	
 }
 
-.footerInfo:first-of-type {
-	color: #b7b5b5;
+.footerInfo span {
+	color: #9f9f9f;
 	font-size: 13px;
-	margin-bottom: 5px;
+	margin-right: 10px;
+	font-family: "Nanum Gothic";
 }
 
-.footerInfo:last-of-type {
+.footerInfo p {
 	color: #404040;
 	letter-spacing: 1.2px;
+	font-family: "Nanum Gothic";	
 	font-size: 11px;
 	font-weight: bold;
+	margin-top: 5px;
 }
 
 .footerMobile {
@@ -430,7 +432,7 @@ img.logo {
 	}
 	
 	.menuBox.second {
-		background-size: 315px 530px;
+		background-size: 310px 530px;
 		border-top-width: 10px;
 		
 	}
@@ -618,6 +620,10 @@ img.logo {
 }
 	
 @media screen and (max-width: 749px) {
+	
+	.footerInfo p {
+		margin-bottom: 12px;
+	}
 	
 	div.container.appear {
 		display: block;

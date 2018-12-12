@@ -11,12 +11,10 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
           
 @font-face {
-	font-family: 'mal';
+/* 	font-family: 'mal';
 	src: url('/resources/fonts/malgun.eot');
 	src: url('/resources/fonts//malgun.woff') format('woff');
-	
-/* 	src: url('/resources/fonts/malgun-Light?#iefix') format('embedded-opentype'); */
-/*  	src: url('/resources/fonts/malgun') format('truetype'); */
+ */	
 }
 
 html, body {
@@ -306,7 +304,7 @@ nav ul.theory {
 	padding: 0;
 	list-style: none;
 	/* font-family: 'Noto Sans KR', sans-serif; */
-	font-family: "Malgun Gothic", "ë§‘ì€ ê³ ë”•", ë‹ì›€, Dotum, êµ´ë¦¼, Gulim, mal;
+	/* font-family: "Malgun Gothic", "ë§‘ì€ ê³ ë”•", ë‹ì›€, Dotum, êµ´ë¦¼, Gulim, mal; */
 	height: 62px;
 }
 
@@ -482,6 +480,7 @@ nav {
 	    position: relative;
 	    overflow: hidden;
 	    /* text-align: center; */
+	    font-family: 나눔고딕 EXTRABOLD;
 	    /* float: left; */
 	    border-top: 1px solid #E6E6E6;
 }

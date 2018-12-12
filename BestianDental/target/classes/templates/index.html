@@ -266,11 +266,8 @@
 	
 	</section>
 	
-	
-	
-	
 	</div>
-	
+
 	<div class="container appear">
 	
 	<section class="mainMenu">
@@ -311,7 +308,7 @@
 			<div class="smallMapBox">
 				<img src="img/main2/map.png" alt=""/>
 			</div>
-		 		<h2>오시는길</h2>
+		 		<h2 onclick="location.href='http://www.yangak.com/new/intro/index4.php'">오시는길</h2>
 			</div>
 			</div>
 			
@@ -320,7 +317,7 @@
 				<div class="kakaoBox">
 				<img src="img/main2/kakao.png" alt=""/>
 			</div>
-				<h2>카톡상담</h2>
+				<h2 onclick="location.href='http://www.yangak.com/new/bbs/kakao.php?url=%2Fnew%2Fimplant01%2Findex1.php'">카톡상담</h2>
 			</div>
 			</div>
 			
@@ -787,11 +784,11 @@
 		$(window).scroll(function() {
 
 			
-			var scroll = $(window).scrollTop() + 150;
+			var scroll = $(window).scrollTop() + 152;
 
-			if(927 <=  scroll){
+			/* if(927 <=  scroll){
 				scroll = 927;
-			}
+			} */
 
 			
     	    TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});

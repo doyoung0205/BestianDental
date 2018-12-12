@@ -742,13 +742,17 @@
 		
 		var topPosition = $("#quickMenu").offset().top;
 		var scroll = $(window).scrollTop() + 155;
-		
+		console.log(scroll);
 			
 		$("#quickMenu").stop().animate(
-				{top: scroll + "px"}, 
-				{queue: false,}
-				, 'easeOutQuad');
+				{top: scroll + "px"} 
+				, 'fast');
 		
+/* 		$("#quickMenu").stop().animate(
+				{top: scroll + "px"}, 
+				{queue: false, duration: 3000}
+				, 'slow	');
+		 */
 		
 		/* console.log("top: "+top);
 		console.log("topPosition: "+topPosition); */

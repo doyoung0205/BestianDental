@@ -789,6 +789,28 @@
 	 
 		    
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
+
+		
+		$(window).scroll(function() {
+			
+			var topPosition = $("#quickMenu").offset().top;
+			var scroll = $(window).scrollTop() + 155;
+			console.log(scroll);
+				
+/* 			$("#quickMenu").stop().animate(
+					{top: scroll + "px"} 
+					, 'fast');
+			 */
+	 		$("#quickMenu").stop().animate(
+					{top: scroll + "px"} 
+					, 'Expo.ease');
+			
+			/* console.log("top: "+top);
+			console.log("topPosition: "+topPosition); */
+
+			
+		});
+		
 		
 	</script>
 

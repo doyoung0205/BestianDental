@@ -551,11 +551,11 @@ nav ul.theory li.root:hover > a.rootA{
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(5) {
-    padding-left: 0px;
+    padding-left: 1px;
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(6) {
-    padding-left: 20px;
+    padding-left: 27px;
 }
 
 /* 반응형 경계선  */

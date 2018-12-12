@@ -496,6 +496,7 @@ span.more {
     font-size: 24px;
     vertical-align: middle;
     font-weight: bold;
+    font-family: "Nanum Gothic";
 }
 
 .leftBox .content {
@@ -508,6 +509,7 @@ span.more {
     margin: 0;
     font-weight: bold;
     font-size: 30px;
+    font-family: "Nanum Gothic";
 }
 
 
@@ -874,6 +876,8 @@ select, input, button, textarea {
 	}
 		
 	.cacaoLine .content h1 b {
+	    font-family: "Nanum Gothic";
+	    font-weight: bold;
 	    font-size: 21px;
 	    margin: 0 126px 0 126px;
 	}	      

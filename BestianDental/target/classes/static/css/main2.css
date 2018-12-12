@@ -92,7 +92,7 @@ div:after {
 }
 
 .mainMenu h2 {
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: bold;
     letter-spacing: -0.4px;
     line-height: 40px;
@@ -223,7 +223,7 @@ h2.textRight.top {
 }
 
 .mainMenu h2.bigText {
-	font-size: 30px;
+	font-size: 28px;
 }
 
 img.barImg {
@@ -241,7 +241,7 @@ img.barImg {
 
 .mapImgBox {
 	position: absolute;
-	bottom: 14%;
+	bottom: 16%;
 }
 
 .smallMapBox {
@@ -339,7 +339,7 @@ img.logo {
 }
 
 .footerNav a:hover {
-	color: #929292;
+	color: #86878c;
 }
 
 .footerNav {
@@ -411,7 +411,6 @@ img.logo {
 	}
 	
 	.mainMenu h2 {
-		font-size: 23px;
 	}
 	
 	.textRight.halfCall.time {
@@ -719,6 +718,7 @@ img.logo {
    	    margin: 0 10px 10px 0;
 		padding: 7px;
 		color: #fff;
+		font-size: 11px;
 	    font-weight: bold;
 	    background: #5f6167;
 	}
@@ -736,7 +736,7 @@ img.logo {
 
 @media screen and (max-width: 489px) {
 	.mainMenu h2 {
-		font-size: 16px;
+		font-size: 16.5px;
 	}
 	
 	.halfText h2.halfCall {
@@ -782,4 +782,10 @@ img.logo {
 	h2.smallH2 {
 		font-size: 14px;
 	}
+}
+
+@media screen and (max-width: 424px) {
+	.iconImg {
+		width: 35px;
+	}	
 }

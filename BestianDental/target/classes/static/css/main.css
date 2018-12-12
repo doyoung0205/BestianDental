@@ -305,7 +305,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-    font-family: "NanumSquare";
+	font-family: "NanumSquare";
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -345,6 +345,8 @@ a:link, a:visited, a:active, a:hover {
 	float: right;
 	position: relative;
 	font-size: 16px;
+    font-family: "Nanum Gothic";
+    font-weight: bold;
 	color: white;
 	letter-spacing: -1;
 } 
@@ -524,6 +526,7 @@ span.more {
 }
 
 .semiBox .semiTitle h3 {
+	font-family: "Nanum Gothic";
     font-weight: bold;
 }
 

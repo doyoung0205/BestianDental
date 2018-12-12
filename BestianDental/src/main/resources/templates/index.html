@@ -348,7 +348,6 @@
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
 			 subWidth = $(".visual_img.sub.target").width(); 	
-			 
 			visualModule(0);
 		    mainVisual();
 		     
@@ -784,7 +783,6 @@
 	 }
 	 
 	 
-		    
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 
 		
@@ -792,8 +790,11 @@
 
 			
 			var scroll = $(window).scrollTop() + 150;
-			
-			
+
+			if(930 <=  scroll){
+				scroll =930;
+			}
+
 			
     	    TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
 			 

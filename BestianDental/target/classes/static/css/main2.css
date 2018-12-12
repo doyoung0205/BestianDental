@@ -717,13 +717,14 @@ img.logo {
 	    display: inline-block;
     	float: left;
    	    margin: 0 10px 10px 0;
-		border: 1px solid #b7b5b5;
 		padding: 7px;
-		color: #404040;
+		color: #fff;
+	    font-weight: bold;
+	    background: #5f6167;
 	}
 	
 	.mobileNav a:hover {
-		color: #929292;
+		background: #86878c;
 	}
 }
 

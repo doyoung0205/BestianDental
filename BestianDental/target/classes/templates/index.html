@@ -119,7 +119,7 @@
 					</div>  
 					
 					<div class ="visual_img sub2 target">
-						<div class =imageWrap><img alt="" src="/img/main/carocel4/4text_s.png"></div>
+						<div class =imageWrap><img alt="" src="/img/main/carocel4/text_s.png"></div>
 					</div>  
 			</div>		
 					<div>
@@ -132,9 +132,6 @@
 				</div>
 			</div>
 		</li>
-		 
-
-		 		 
 	</ul> 
 
 	<!-- 케러셀 버튼 -->
@@ -793,25 +790,10 @@
 		
 		$(window).scroll(function() {
 			
-			var topPosition = $("#quickMenu").offset().top;
 			var scroll = $(window).scrollTop() + 146;
-			console.log(scroll);
-				
-/* 			$("#quickMenu").stop().animate(
-					{top: scroll + "px"} 
-					, 'fast');
-			 */
-			 
- 			   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
-			 
-/* 	 		$("#quickMenu").stop().animate(
-					{top: scroll + "px"} 
-					, 'Expo.ease');
-			 */
-			/* console.log("top: "+top);
-			console.log("topPosition: "+topPosition); */
-
 			
+    	    TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
+			 
 		});
 		
 		

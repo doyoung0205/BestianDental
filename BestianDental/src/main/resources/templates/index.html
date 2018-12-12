@@ -117,6 +117,10 @@
 					<div class ="visual_img sub target">
 						<div class =imageWrap><img alt="" src="/img/main/carocel4/sub.png"></div>
 					</div>  
+					
+					<div class ="visual_img sub2 target">
+						<div class =imageWrap><img alt="" src="/img/main/carocel4/4text_s.png"></div>
+					</div>  
 			</div>		
 					<div>
 				</div>
@@ -456,9 +460,9 @@
  					
  					if(_visualCrr ==0){
  						
- 						console.log("321 - ((430- dif2)/4 + 95.5)  =  "+( 321 - ((430- dif2)/4 + 95.5)))
+ 						console.log("321 - ((430- dif2)/4 + 95.5)  =  "+( 321 - ((430- dif2)/4 + 70.5)))
  						
- 						$title.width(321 - ((430- dif2)/4 + 95.5));
+ 						$title.width(250);
  						$sub.width(321 - ((430- dif2)/4 + 76.5));
  						
  					}else if(_visualCrr ==1){
@@ -593,6 +597,7 @@
 		            TweenMax.to($visualWrapLi.find(" .title"), .3, {opacity:0,  ease:es_step});
 		            TweenMax.to($visualWrapLi.find(" .sub"), .3, {opacity:0,  ease:es_step});
 		            TweenMax.to($visualWrapLi.find(" .text"), .3, {opacity:0, ease:es_step});
+		            TweenMax.to($visualWrapLi.find(" .sub2"), .3, {opacity:0, ease:es_step});
 		            TweenMax.to($visualWrapLi, .3, {opacity:0, ease:es_step});
 		            
 		            /* 위치 와 크기 조절 */
@@ -618,7 +623,7 @@
 		             	
 		            }else if(_visualCrr == 3){
 		            	
-		             	carocel1($visualWrapLi,_visualCrr);
+		            	carocel4($visualWrapLi,_visualCrr);
 					    
 		            }
 		          	
@@ -641,13 +646,37 @@
 		    });
 		    
 		    
-/* 		    var x;
+ 		    var x;
 		    var x2;
 		
- 		    $mainVisual.mousedown(function(event){
-		  		   x = event.pageX;
-		    });
-		    
+ 		    $mainVisual.bind("touchstart",function(e){
+
+ 			   	x = e.originalEvent.touches[0].screenX;
+
+ 		    });   
+		
+ 		    $mainVisual.bind("touchend ",function(e){
+
+	   		   x2 = e.originalEvent.touches[0].screenX;
+	 		   var dif = x2-x;
+	 		   
+	 		   alert(dif);
+	 		   
+	 		 	x = null;
+	 		 	x2 = null;
+		 		 	
+		   	   if((dif) > 50){
+		   		   visualCrr.number--;
+		   		   
+		   	   }else if((dif) < -50){
+		   		   visualCrr.number++;
+		   	   }
+		   	   
+		   });  
+ 		    
+
+
+/* 		    
 		    $mainVisual.mouseup(function(event){
 		  		   x2 = event.pageX;
 		  		 	var dif = x2-x;
@@ -660,8 +689,8 @@
 		    	   }else if((dif) < -50){
 		    		   visualCrr.number++;
 		    	   }
-		    });  */
-		    
+		    });  
+		     */
 		    
 	 } 
 	 
@@ -737,6 +766,27 @@
 		
 
 	 }
+	 
+	 function carocel4($visualWrapLi, _visualCrr){
+		 
+		    TweenMax.delayedCall(0.2,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .title"), 0.5, {alpha:0, x:-100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+
+		    TweenMax.delayedCall(0.3,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub"), 0.5, {alpha:0, y:20},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
+		    });
+
+		    TweenMax.delayedCall(0.4,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub2"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		    TweenMax.delayedCall(0.5,function(){
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text.target"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+		    });
+		     
+	 }
+	 
+	 
 		    
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 		

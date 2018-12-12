@@ -11,19 +11,15 @@
 			
 			if($(this).hasClass("active")){
 				
-				var exitWidth =$('.sidebarMenu').width();
 				
 				menuBig.css({
 					right:0
 				})
 					
-				$('.exit').css({
-					right:exitWidth
-				})
 					
 				$('.overlay92').fadeIn();
 				
-				$('html').css('overflow-y','hidden');
+				$('html, body').css({'overflow': 'hidden', 'height': '100%'});
 				
 				
 			}else{
@@ -32,13 +28,13 @@
 					right:-110+"%"
 				});
 				
-				$('.exit').css({
-					right:-110+"%"
-				});
-				
 			    $('.overlay92').fadeOut();
-			    $('html').css('overflow-y','auto');
 			    
+			    $('html, body').css({'overflow': 'auto', 'height': '100%'});
+			    
+			    if($("#mainVisual")){
+			    	visualModule($("#mainVisual > ul.visual_wrap > li.active").index());
+			    }
 			}
 			
 		});
@@ -52,13 +48,13 @@
 				right:-110+"%"
 			});
 			
-			$('.exit').css({
-				right:-110+"%"
-			});
-			
 		    $('.overlay92').fadeOut();
 		    
-		    $('html').css('overflow-y','auto');
+		    $('html, body').css({'overflow': 'auto', 'height': '100%'});
+		    
+		    if($("#mainVisual")){
+		    	visualModule($("#mainVisual > ul.visual_wrap > li.active").index());
+		    }
 		    
 		});
 		

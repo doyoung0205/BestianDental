@@ -132,7 +132,7 @@ h2.textRight.days {
 
 
 h2.halfCall {
-    font-size: 40px;
+    font-size: 35px;
     letter-spacing: 1.4px;
     font-weight: 550;
     position: absolute;
@@ -333,6 +333,7 @@ img.logo {
 	margin-right: 20px;
 	color: #404040;
 	font-size: 13px;
+	font-family: "Nanum Gothic";
 }
 
 .footerNav a:hover {
@@ -344,7 +345,7 @@ img.logo {
 }
 
 .footerInfo {
-	
+	font-family: "Nanum Gothic";	
 }
 
 .footerInfo:first-of-type {
@@ -486,6 +487,10 @@ img.logo {
 }
 
 @media screen and (max-width: 920px) {
+	
+	h2.textRight.top {
+		line-height: 35px;
+	}
 	.mainMenu h2 {
 		font-size: 18px;
 	}
@@ -542,7 +547,7 @@ img.logo {
 	}
 	
 	.callImgBox {
-	
+	    margin: 20px 10px 0;
 	}
 	
 	.menuText.first h2 {

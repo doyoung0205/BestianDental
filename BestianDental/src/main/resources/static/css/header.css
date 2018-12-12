@@ -339,7 +339,7 @@ font-size: 14px;
 	
 font-weight: 600;
 	
-letter-spacing: -1px;
+letter-spacing: 0;
 }
 
 
@@ -424,8 +424,8 @@ ul.uberMenu li.uberColumn ul > li {
 
 ul.uberMenu li.uberColumn ul > li  > a {
 
-letter-spacing: -1;
-	    
+letter-spacing: 0;
+
 font-size: 13px;
 
 font-family: "Nanum Gothic";

@@ -55,8 +55,8 @@ div:after {
     height: 278px;
     position: absolute;
     top: 927px;
-    right: 100px;
-	box-shadow: 1px 2px 7px 0 #ccc;
+    right: 5%;
+    box-shadow: 1px 2px 7px 0 #ccc;
 }
 
 .menuText {

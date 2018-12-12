@@ -794,17 +794,20 @@
 		$(window).scroll(function() {
 			
 			var topPosition = $("#quickMenu").offset().top;
-			var scroll = $(window).scrollTop() + 155;
+			var scroll = $(window).scrollTop() + 105;
 			console.log(scroll);
 				
 /* 			$("#quickMenu").stop().animate(
 					{top: scroll + "px"} 
 					, 'fast');
 			 */
-	 		$("#quickMenu").stop().animate(
+			 
+ 			   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
+			 
+/* 	 		$("#quickMenu").stop().animate(
 					{top: scroll + "px"} 
 					, 'Expo.ease');
-			
+			 */
 			/* console.log("top: "+top);
 			console.log("topPosition: "+topPosition); */
 

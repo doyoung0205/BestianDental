@@ -27,11 +27,12 @@ html, body {
 	padding: 0;
 	position: relative;
 	text-transform: initial;
-	background: hsl(0, 0%, 100%) !important;
+	background: #FBFBFB !important;
 	overflow-x: hidden;
 }
 
-body { 
+body {
+	/* background-color: #FBFBFB !important; */
 	overflow-x:hidden;
 }
 
@@ -475,6 +476,7 @@ li.menuF ul li a:hover {
 
 
 nav {
+	background-color: #FFF;
 	box-shadow: 0px 1px 0px 0px rgba(217, 212, 212, 0.48);
 }
 

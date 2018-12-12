@@ -968,6 +968,10 @@ select, input, button, textarea {
 		background-image: url(/img/main/carocel1/main_4.png);
 	}
 	
+	.visual_wrap .list2{
+		background-image: url(/img/main/carocel2/main_s.png);
+	}
+	
 	#mainVisual > ul.visual_wrap > li.list1 > div.leftTap > div.imageContentWrap > div.visual_img.sub.target{
 	    top: 55%;
 	}

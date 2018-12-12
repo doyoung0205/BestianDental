@@ -56,7 +56,8 @@ div:after {
     position: absolute;
     top: 927px;
     right: 5%;
-    box-shadow: 1px 2px 7px 0 #ccc;
+    z-index: 9999;
+    box-shadow: 1px 2px 7px 0 #6d6363;
 }
 
 .menuText {
@@ -333,6 +334,7 @@ img.logo {
 	margin-right: 20px;
 	color: #404040;
 	font-size: 13px;
+	font-weight: bold;
 	font-family: "Nanum Gothic";
 }
 
@@ -341,7 +343,7 @@ img.logo {
 }
 
 .footerNav {
-	margin-bottom: 0;
+	margin-bottom: 3px;
 }
 
 .footerInfo {
@@ -351,12 +353,14 @@ img.logo {
 .footerInfo:first-of-type {
 	color: #b7b5b5;
 	font-size: 13px;
+	margin-bottom: 5px;
 }
 
 .footerInfo:last-of-type {
 	color: #404040;
 	letter-spacing: 1.2px;
 	font-size: 11px;
+	font-weight: bold;
 }
 
 .footerMobile {

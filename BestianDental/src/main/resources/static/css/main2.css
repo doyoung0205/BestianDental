@@ -93,9 +93,9 @@ div:after {
 
 .mainMenu h2 {
 	font-size: 22px;
-	font-weight: bold;
-    letter-spacing: -0.4px;
-    line-height: 40px;
+	/* font-weight: bold; */
+	letter-spacing: -0.4px;
+	line-height: 40px;
 }
 
 .menuBox.halfBox h2 {
@@ -561,6 +561,8 @@ img.logo {
 	
 	.menuBox.halfBox h2 {
 		margin-top: 5px;
+		-moz-text-stroke: 0.5px;
+		-webkit-text-stroke: 0.5px;
 	}
 	
 	img.barImg {
@@ -591,6 +593,8 @@ img.logo {
 @media screen and (max-width: 810px) {
 	.mainMenu h2 {
 		font-size: 16px;
+		-moz-text-stroke: 0.5px;
+		-webkit-text-stroke: 0.5px;
 	}
 	
 	h2.bigText {

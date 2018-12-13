@@ -10,7 +10,9 @@
 
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
-/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');*/
+@import url(https://cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
+
+/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic'); */
       
 @font-face {
 /* 	font-family: 'mal';
@@ -20,38 +22,6 @@
 }
 
 /* nanum-gothic-regular - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic'),
-       url('/fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-Regular.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* NanumGothic-Bold - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/NanumGothic-Bold.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic Bold'), local('NanumGothic-Bold'),
-       url('/fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-Bold.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* nanum-gothic-800 - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/NanumGothic-ExtraBold.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'),
-       url('/fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-ExtraBold.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
 
 
 
@@ -595,7 +565,7 @@ nav ul.theory li.root:hover > a.rootA{
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(6) {
-    padding-left: 0px;
+    padding-left: 27px;
 }
 
 /* 반응형 경계선  */
@@ -718,6 +688,10 @@ nav {
 	
 
 @media screen and (max-width:991px) {
+	
+	
+	
+	
 }
 
 

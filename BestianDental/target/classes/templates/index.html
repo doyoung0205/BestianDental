@@ -343,18 +343,20 @@
 		
 		var img = new Image();
 		
-		img.src = '/img/main/carocel4/text.png';
+		img.src = 'img/main2/clock.png';
 
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
 			 subWidth = $(".visual_img.sub.target").width(); 	
 
+
 		// 'load' event
 		$(img).on('load', function() {
+			TweenMax.to($(".visual_wrap"), 0, {opacity:1, display:"block",ease:es_step});			
+		    visualModule(0);
+		    mainVisual();
 			
-		     visualModule(0);
-		     mainVisual();
-			
+   			window.scrollTo(0, 0);
 		}); 
 
 		
@@ -707,7 +709,7 @@
 		    });
 
 		    TweenMax.delayedCall(0.4,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text"), 0.8, {alpha:0, x:150},{alpha:1.0, x:0,  ease: Quad.easeOut, force3D: true});
 		    });
 		    
 	 }
@@ -765,7 +767,6 @@
 		    TweenMax.delayedCall(1,function(){
 			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text.target  .imageWrap").eq(3), 0.5, {alpha:0, y:40},{alpha:1.0, y:0, ease: Quad.easeOut, force3D: true});
 		    });
-		
 
 	 }
 	 
@@ -783,7 +784,7 @@
 			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .sub2"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
 		    TweenMax.delayedCall(0.5,function(){
-			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text.target"), 0.5, {alpha:0, x:100},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($visualWrapLi.eq(_visualCrr).find(" .text.target"), 1.0, {alpha:0, x:150},{alpha:1.0, x:0, ease: Quad.easeOut, force3D: true});
 		    });
 		     
 	 }
@@ -791,18 +792,20 @@
 	 
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 
-		
 		$(window).scroll(function() {
 
-			
 			var scroll = $(window).scrollTop() + 152;
 
 			/* if(927 <=  scroll){
 				scroll = 927;
 			} */
-
 			
-    	    TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
+			var $quickMenu = $("#quickMenu");
+			if($quickMenu.css("opacity") == 0){
+			    TweenMax.fromTo($quickMenu, 1.5, {opacity:0,alpha:0},{opacity:1,ease:Quad.easeOut, force3D: true});
+			}
+			
+    	 	   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
 			 
 		});
 		

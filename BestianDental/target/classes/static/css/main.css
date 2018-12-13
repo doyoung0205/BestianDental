@@ -767,8 +767,15 @@ select, input, button, textarea {
     width: 310px;
     display: none;
 }
+#quickMenu{
+	opacity: 0;
+}
 
 /* 반응형 */
+.visual_wrap{
+	opacity: 0;
+	display: none;
+}
 
 @media screen and (max-width:1280px) {
 	

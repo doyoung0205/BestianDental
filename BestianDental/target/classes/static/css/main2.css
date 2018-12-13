@@ -144,7 +144,7 @@ h2.textRight {
 }
 
 h2.textRight.days {
-	margin: 30px 0 0 30px;
+	margin: 15px 0 0 30px;
 }
 
 
@@ -153,7 +153,7 @@ h2.halfCall {
     letter-spacing: 1.4px;
     font-weight: 550;
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     right: 5%;
     left: 8%;
 }
@@ -193,13 +193,13 @@ h2.halfCall {
 	display: inline-block;
 	float: left;
 	position: absolute;
-    bottom: 17%;
+    bottom: 12%;
     left: 6%;
 }
 
 h2.textRight.top {
 	position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     right: 5%;
 }
 
@@ -280,7 +280,7 @@ h2.textRight.top {
 
 .mapImgBox {
 	position: absolute;
-	bottom: 16%;
+	bottom: 11%;
 }
 
 .smallMapBox {
@@ -472,7 +472,7 @@ img.logo {
 @media screen and (max-width: 1366px) {
 	
 	h2.textRight.days {
-		margin: 30px 0 0;
+		margin: 5px 0 0;
 	}
 	
 	div.container {
@@ -562,6 +562,12 @@ img.logo {
 	}
 }
 
+@media screen and (max-width: 952px) {
+	h2.textRight.month {
+		font-size: 17px;
+	}
+}
+
 @media screen and (min-width: 921px) {
 	.mainMenu h2 {
 		font-weight: bold;
@@ -616,6 +622,15 @@ img.logo {
 }
 
 @media screen and (max-width: 850px) {
+	
+	h2.textRight.days {
+		line-height: 22px;
+	}
+	
+	h2.textRight.month {
+		line-height: 22px;
+		font-size: 15px;
+	}
 	
 	.barBorder {
 		margin-top: 22px;
@@ -675,6 +690,12 @@ img.logo {
 	}
 }
 
+@media screen and (min-width: 810px) and (max-width: 850px) {
+	h2.textRight.days {
+		margin-top: 15px;
+	}
+}
+
 @media screen and (max-width: 810px) {
 	.mainMenu h2 {
 		font-size: 16px;
@@ -706,6 +727,12 @@ img.logo {
 		height: 400px;
 	}
 }
+
+@media screen and (min-width: 750px) and (max-width: 810px) {
+	h2.textRight.days {
+		margin-top: 0;
+	}
+}
 	
 @media screen and (max-width: 749px) {
 	
@@ -729,8 +756,16 @@ img.logo {
 	h2.textRight.days {
 		position: absolute;
 	    right: 20px;
-	    top: 40px;
+	    top: 50px;
 	    margin-top: 20px;
+	}
+	
+	h2.textRight.month {
+		position: absolute;
+	    top: 45%;
+	    right: 6%;
+	    font-size: 20px;
+	    margin-top: 0;	
 	}
 	
 	.halfText {
@@ -825,6 +860,11 @@ img.logo {
 }
 
 @media screen and (max-width: 489px) {
+	
+	h2.textRight.month {
+		font-size: 15px;
+	}
+	
 	.mainMenu h2 {
 		font-size: 16px;
 	}

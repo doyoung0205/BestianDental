@@ -496,7 +496,7 @@ span.more {
     font-size: 24px;
     vertical-align: middle;
     font-weight: bold;
-    font-family: "Nanum Gothic";
+    font-family: "NanumG";
 }
 
 .leftBox .content {
@@ -509,7 +509,7 @@ span.more {
     margin: 0;
     font-weight: bold;
     font-size: 30px;
-    font-family: "Nanum Gothic";
+    font-family: "NanumG";
 }
 
 
@@ -772,7 +772,7 @@ select, input, button, textarea {
 }
 
 /* 반응형 */
-.visual_wrap{
+visual_wrap{
 	opacity: 0;
 	display: none;
 }

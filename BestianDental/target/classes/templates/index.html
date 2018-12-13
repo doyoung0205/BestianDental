@@ -343,19 +343,17 @@
 		
 		var img = new Image();
 		
-		img.src = '/img/main/carocel4/text.png';
+		img.src = 'img/main2/clock.png';
 
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
 			 subWidth = $(".visual_img.sub.target").width(); 	
 
-
 		// 'load' event
 		$(img).on('load', function() {
-			
 			TweenMax.to($(".visual_wrap"), 0, {opacity:1, display:"block",ease:es_step});			
-		    visualModule(0);
-		    mainVisual();
+		     visualModule(0);
+		     mainVisual();
 			
 		}); 
 
@@ -793,7 +791,7 @@
 	 function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 
 		$(window).scroll(function() {
-
+ 
 			var scroll = $(window).scrollTop() + 152;
 
 			/* if(927 <=  scroll){
@@ -802,11 +800,11 @@
 			
 			var $quickMenu = $("#quickMenu");
 			if($quickMenu.css("opacity") == 0){
-			    TweenMax.fromTo($quickMenu, 1.5, {opacity:0,alpha:0},{opacity:1,ease:Quad.easeOut, force3D: true});
+			    TweenMax.fromTo($quickMenu, 1.5, {opacity:0,alpha:0},{opacity:1,top:scroll,ease:Quad.easeOut, force3D: true});
+			}else{
+    	 	   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
 			}
 			
-    	 	   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
-			 
 		});
 		
 		

@@ -345,7 +345,7 @@ a:link, a:visited, a:active, a:hover {
 	float: right;
 	position: relative;
 	font-size: 16px;
-    font-family: "Nanum Gothic";
+    font-family: "Noto Sans KR";
     font-weight: bold;
 	color: white;
 	letter-spacing: -1;
@@ -496,7 +496,7 @@ span.more {
     font-size: 24px;
     vertical-align: middle;
     font-weight: bold;
-    font-family: "NanumG";
+    font-family: "Noto Sans KR";
 }
 
 .leftBox .content {
@@ -509,7 +509,7 @@ span.more {
     margin: 0;
     font-weight: bold;
     font-size: 30px;
-    font-family: "NanumG";
+    font-family: "Noto Sans KR";
 }
 
 
@@ -776,6 +776,11 @@ visual_wrap{
 	opacity: 0;
 	display: none;
 }
+
+.semiBox.after .semiTitle {
+    margin-bottom: 10px;
+}
+
 
 @media screen and (max-width:1280px) {
 	

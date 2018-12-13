@@ -12,49 +12,45 @@
  */
  
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
- 
-.fng{font-family:'나눔고딕', NanumGothic, 'Nanum Gothic';}
 
-
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanumpenscript.css");
- 
-.fng{font-family:'나눔고딕', NanumGothic, 'fontng', 'Nanum Gothic';}
-.fnb{font-family:'Nanum Brush Script';}
-.fng{font-family:'Nanum Gothic Coding';}
-.fng{font-family:'나눔명조', NanumMyeongjo, 'fontnm', 'Nanum Myeongjo';}
-.fng{font-family:'나눔펜', NanumPen, 'fontnp', 'Nanum Pen Script';}
-
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: light;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: medium;
+   font-weight: 500;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: bold;
+   font-weight: 700;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
 
 @import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
 
-@font-face {
-/* 	font-family: 'mal'; 
-	src: url('/resources/fonts/malgun.eot');
-	src: url('/resources/fonts//malgun.woff') format('woff');
- */	
-}
 
-@font-face {
- font-family: 'NanumG';
- font-weight: 400;
- src: url(../fonts/NanumGothic-Regular.eot);
- src: url(../fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
-      url(../fonts/NanumGothic-Regular.woff) format('woff'),
-      url(../fonts/NanumGothic-Regular.ttf) format('truetype');
-}
-@font-face {
- font-family: 'NanumGB';
- font-weight: 400;
- src: url(../fonts/NanumGothic-ExtraBold.eot);
- src: url(../fonts/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
-      url(../fonts/NanumGothic-ExtraBold.woff) format('woff'),
-      url(../fonts/NanumGothic-ExtraBold.ttf) format('truetype');
-}
+
 
 /* @font-face {
  font-family: 'NanumG';
@@ -190,7 +186,7 @@ ul.menuSet {
  	border-bottom: 0px solid #111;
  	text-shadow: 0 0px 0px rgba(0,0,0,.5);
  	border-top: 0px solid #313131;
- 	font-family: "NanumG";
+ 	font-family: "Noto Sans KR";
  }
  
  .x-sidebar .x-sidebar-header span {
@@ -238,7 +234,7 @@ ul.menuSet {
 	line-height: 14px;
 	padding: 6.5px 25px 8.5px 47px;
 	display: block;
-	font-family: "NanumG";
+	font-family: "Noto Sans KR";
     -webkit-text-stroke: 0.2px;
     -moz-text-stroke: 0.2px;
 }
@@ -385,23 +381,20 @@ nav  ul.theory li.root {
 
 nav  ul.theory li.root > a.rootA {
 	
-font-family: "NanumG";
+font-family: "Noto Sans KR";
 	
 height: 96%;
 	
 line-height: 62px;
 	
-color: rgba(33, 33, 33, 0.78);
+color: #1E243F;
 	
 font-size: 14.5px;
 	
 font-weight: 600;
 	
 letter-spacing: 0;
-
-    -moz-text-stroke: 0.5px;
-    -ms-text-stroke: 0.5px;
-    -webkit-text-stroke: 0.5px;
+	
 }
 
 
@@ -494,10 +487,13 @@ font-size: 13px;
 
 /* font-family: "Nanum Gothic"; */
 
-    font-family: "NanumG";
-    -moz-text-stroke: 0.1px;
-    -ms-text-stroke: 0.1px;
-    -webkit-text-stroke: 0.1px;
+font-family: "Noto Sans KR";
+
+-moz-text-stroke: 0.1px;
+
+-ms-text-stroke: 0.1px;
+
+-webkit-text-stroke: 0.1px;
 
 /* padding: 3px 0; */
 
@@ -505,7 +501,7 @@ font-size: 13px;
 
 color: #1E243F;
 
-font-weight: 500;
+font-weight: 400;
 
 line-height: 28px;
 }
@@ -527,7 +523,7 @@ nav .brandLogo {
     padding-top: 10px;
     position: absolute;
     /* margin-bottom: 20px; */
-    left: -160px;
+    left: -200px;
     /* margin-right: 20px; */
 }
 
@@ -782,7 +778,7 @@ nav {
 .h-members .h-members-btns div.h-members-sns-btns a {
     color: #999999;
     font-size: 12px;
-	font-family: "NanumG";
+	font-family: "Noto Sans KR";
     -moz-text-stroke: 0.1px;
     -ms-text-stroke: 0.1px;
     -webkit-text-stroke: 0.1px;

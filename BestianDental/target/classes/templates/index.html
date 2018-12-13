@@ -798,12 +798,7 @@
 				scroll = 927;
 			} */
 			
-			var $quickMenu = $("#quickMenu");
-			if($quickMenu.css("opacity") == 0){
-			    TweenMax.fromTo($quickMenu, 1.5, {opacity:0,alpha:0},{opacity:1,top:scroll,ease:Quad.easeOut, force3D: true});
-			}else{
-    	 	   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
-			}
+   	 	   TweenMax.to($("#quickMenu"),0, {top:scroll,  ease:"slow"});
 			
 		});
 		

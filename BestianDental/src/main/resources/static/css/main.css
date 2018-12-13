@@ -767,9 +767,6 @@ select, input, button, textarea {
     width: 310px;
     display: none;
 }
-#quickMenu{
-	opacity: 0;
-}
 
 /* 반응형 */
 visual_wrap{

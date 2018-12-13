@@ -21,6 +21,33 @@
 	src: url('/resources/fonts//malgun.woff') format('woff');
  */	
 }
+
+@font-face {
+ font-family: 'NanumG';
+ font-weight: 400;
+ src: url(../fonts/NanumGothic-Regular.eot);
+ src: url(../fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumGothic-Regular.woff) format('woff'),
+      url(../fonts/NanumGothic-Regular.ttf) format('truetype');
+}
+
+/* @font-face {
+ font-family: 'NanumG';
+ font-weight: 600;
+ src: url(../fonts/NanumGothic-Bold.eot);
+ src: url(../fonts/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumGothic-Bold.woff) format('woff'),
+      url(../fonts/NanumGothic-Bold.ttf) format('truetype');
+}
+
+@font-face {
+ font-family: 'NanumG';
+ font-weight: 800;
+ src: url(../fonts/NanumGothic-ExtraBold.eot);
+ src: url(../fonts/NanumGothic-ExtraBold?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumGothic-ExtraBold.woff) format('woff'),
+      url(../fonts/NanumGothic-ExtraBold.ttf) format('truetype');
+} */
  
 html, body {
 	margin: 0 auto;
@@ -138,7 +165,7 @@ ul.menuSet {
  	border-bottom: 0px solid #111;
  	text-shadow: 0 0px 0px rgba(0,0,0,.5);
  	border-top: 0px solid #313131;
- 	font-family: "Nanum Gothic";
+ 	font-family: "NanumG";
  }
  
  .x-sidebar .x-sidebar-header span {
@@ -186,7 +213,7 @@ ul.menuSet {
 	line-height: 14px;
 	padding: 6.5px 25px 8.5px 47px;
 	display: block;
-	font-family: "Nanum Gothic";
+	font-family: "NanumG";
     -webkit-text-stroke: 0.2px;
     -moz-text-stroke: 0.2px;
 }
@@ -333,7 +360,7 @@ nav  ul.theory li.root {
 
 nav  ul.theory li.root > a.rootA {
 	
-font-family: "Nanum Gothic";
+font-family: "NanumG";
 	
 height: 96%;
 	
@@ -343,9 +370,13 @@ color: #1E243F;
 	
 font-size: 14px;
 	
-font-weight: 600;
+font-weight: 500;
 	
 letter-spacing: 0;
+
+    -moz-text-stroke: 0.5px;
+    -ms-text-stroke: 0.5px;
+    -webkit-text-stroke: 0.5px;
 }
 
 
@@ -436,7 +467,12 @@ letter-spacing: 0;
 
 font-size: 13px;
 
-font-family: "Nanum Gothic";
+/* font-family: "Nanum Gothic"; */
+
+    font-family: "NanumG";
+    -moz-text-stroke: 0.1px;
+    -ms-text-stroke: 0.1px;
+    -webkit-text-stroke: 0.1px;
 
 /* padding: 3px 0; */
 
@@ -721,7 +757,10 @@ nav {
 .h-members .h-members-btns div.h-members-sns-btns a {
     color: #999999;
     font-size: 12px;
-	font-family: "Nanum Gothic";
+	font-family: "NanumG";
+    -moz-text-stroke: 0.1px;
+    -ms-text-stroke: 0.1px;
+    -webkit-text-stroke: 0.1px;
 }
 
 .h-members .h-members-btns div a {

@@ -10,14 +10,51 @@
 
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
-          
+/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');*/
+      
 @font-face {
 /* 	font-family: 'mal';
 	src: url('/resources/fonts/malgun.eot');
 	src: url('/resources/fonts//malgun.woff') format('woff');
  */	
 }
+
+/* nanum-gothic-regular - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic'),
+       url('/fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/NanumGothic-Regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/NanumGothic-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* NanumGothic-Bold - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/NanumGothic-Bold.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'),
+       url('/fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/NanumGothic-Bold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/NanumGothic-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* nanum-gothic-800 - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/NanumGothic-ExtraBold.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'),
+       url('/fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/NanumGothic-ExtraBold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/NanumGothic-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
+
 
 html, body {
 	margin: 0 auto;

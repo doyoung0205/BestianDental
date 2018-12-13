@@ -338,6 +338,8 @@
 	var subWidth; 		
 	var es_step = "Expo.ease";
 	var $window = $(window);
+	/* carocel autoplay */
+	var autoPlay =true;
  
 	$(function(){
 		  
@@ -696,6 +698,12 @@
 		    	   }
 		    });  
 		     */
+		     
+		     /* autoPlay */
+		     if(autoPlay){
+		    	 
+ 		   setInterval(function(){  visualCrr.number++; }, 3000);
+		     }
 		    
 	 } 
 	 

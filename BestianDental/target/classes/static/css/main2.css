@@ -12,8 +12,11 @@ div:after {
     display: inline-block;
     float: left;
     box-shadow: 0 3px 7px #ddd;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
+	-webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .menuBox.first {
@@ -23,6 +26,11 @@ div:after {
     background: #5f6167;
     background-image: url(/img/main2/line-face.png);
     position: relative;
+    cursor: pointer;
+}
+
+.menuBox.first:hover {
+	opacity: 0.7;
 }
 
 .redBorder {
@@ -47,7 +55,12 @@ div:after {
     background-image: url(/img/main2/doctor.png);
     background-repeat: no-repeat;
     background-color: #f3f1f1;    
-    opacity: 1;	
+    opacity: 1;
+    cursor: pointer;
+}
+
+.menuBox.second:hover {
+	opacity: 0.7;	
 }
 
 .quick {
@@ -96,6 +109,7 @@ div:after {
 	/* font-weight: bold; */
 	letter-spacing: -0.4px;
 	line-height: 40px;
+    color: #091931;
 }
 
 .menuBox.halfBox h2 {
@@ -113,7 +127,7 @@ div:after {
 }
 
 .halfText:first-of-type {
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
 	background: #091931;
 	position: relative;
 }
@@ -144,15 +158,29 @@ h2.halfCall {
 
 .halfText.second {
 	background: #ddd;
+	cursor: pointer;
+}
+
+.halfText.second:hover {
+	background: #f45858;	
 }
 
 .halfText.second h2 {
-	color: #000;
+	color: #091931;
 }
 
 .halfText.third {
-    background: #F45858;
+    background: #091931;
     position: relative;
+    cursor: pointer;
+}
+
+.halfText.third:hover {
+    background: #f45858;
+}
+
+.halfText.third:hover h2 {
+	color: #091931;
 }
 
 .halfText.third h2 {
@@ -188,6 +216,11 @@ h2.textRight.top {
 	height: 80px;
     padding: 13px;
     background: #091931;
+    cursor: pointer;
+}
+
+.smallBox.second:hover {
+	background: #0f2b56;
 }
 
 .smallBox {
@@ -216,7 +249,14 @@ h2.textRight.top {
 	padding: 13px;
 	background: #FFE600;
 	height: 80px;
+	cursor: pointer;
 }
+
+.smallBox.third:hover {
+    background: #ffec42;
+}
+
+
 
 .smallBox.third h2 {
 	margin-top: 13px;
@@ -226,10 +266,7 @@ h2.textRight.top {
 	font-size: 28px;
 }
 
-img.barImg {
-	margin-top: 20px;
-	float: right;
-}
+
 
 .callImgBox {
     margin: 35px 10px 0;
@@ -267,9 +304,19 @@ img.barImg {
 }
 
 .halfBox.appear.first {
+	
+}
+
+.halfBox.appear.first:hover {
+	opacity: 0.7;
+}
+
+.halfBox.appear.first .halfText.first {
 	background-image: url(/img/main2/line-face.png);
     background-color: #5f6167;
     background-size: 100%;
+    cursor: pointer;
+   
 }
 
 .halfBox.appear.second {
@@ -277,6 +324,10 @@ img.barImg {
 	background-color: #f3f1f1;
 	background-size: 170px;
 	position: relative;
+}
+
+.halfBox.appear.second:hover {
+	opacity: 0.7;
 }
 
 .halfBox.appear {
@@ -371,15 +422,36 @@ img.logo {
 
 .halfText.white {
 	background: #FBFBFB;
+	cursor: pointer;
+}
+
+.halfText.white:hover {
+    background: #f45858;	
 }
 
 .contentBox h2 {
-	cursor: pointer;
+
 }
 
 .menuBox.first {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+}
+
+.barBorder {
+	float: right;
+    width: 35px;
+    color: #fbfbfb;
+    border: 2.5px solid #fbfbfb;
+    margin-top: 16px;	
+}
+
+.barBorder.black {
+	border: 2.5px solid #1e243f;
+}
+
+.halfText.third:hover .barBorder {
+	border: 2.5px solid #1e243f;
 }
 
 
@@ -444,10 +516,7 @@ img.logo {
 		height: 10px;
 	}
 	
-	img.barImg {
-		margin-top: 16px;
-	    width: 30px;
-	}
+
 	
 	.menuText, .halfText {
 		padding: 15px;
@@ -499,6 +568,15 @@ img.logo {
 
 @media screen and (max-width: 920px) {
 	
+	.barBorder.black {
+	    border: 2px solid #1e243f;
+	}
+	
+	.barBorder {
+		width: 25px;
+		border: 2px solid #fbfbfb;
+	}
+	
 	h2.textRight.top {
 		line-height: 35px;
 	}
@@ -536,13 +614,17 @@ img.logo {
 }
 
 @media screen and (max-width: 850px) {
+	
+	.barBorder {
+		margin-top: 22px;
+		width: 22px;	
+	}
+	
 	.menuText.first h2 {
 		margin-top: 0;
 	}
 	
-	img.barImg {
-		width: 20px;
-	}
+
 	
 	.menuBox {
 		height: 440px;
@@ -568,10 +650,6 @@ img.logo {
 	
 	.menuBox.halfBox h2 {
 		margin-top: 5px;
-	}
-	
-	img.barImg {
-		margin-top: 22px;
 	}
 	
 	.menuText {
@@ -739,9 +817,9 @@ img.logo {
 }
 
 @media screen and (min-width: 490px) and (max-width: 749px) {
-	img.barImg {
+	.barBorder {
 		width: 30px;
-	}
+	}	
 }
 
 @media screen and (max-width: 489px) {
@@ -770,10 +848,7 @@ img.logo {
 		bottom: 55px;
 	} */
 	
-	img.barImg {
-	    margin-top: 23px;
-   	 	width: 20px;	
-	}
+	
 	
 	.menuBox {
 		height: 380px;

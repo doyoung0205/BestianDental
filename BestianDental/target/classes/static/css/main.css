@@ -1032,12 +1032,35 @@ select, input, button, textarea {
 
 } 
 @media screen and (max-width:695px) {
+	
 	.cacaoLine{
  		  display: none !important;
 	}
 	.leftBox{
 		display: block !important;
 	}
+	.cacaoLine-sub{
+		width: 245px;
+		margin: 0 auto;
+		text-align: left;
+	}
+	.cacaoLine-Box{
+		width: 245px;
+		margin: 0 auto;
+		text-align: left;
+	}
+	
+	.cacaoLine-Box img{
+		width: 80px;
+	}
+	
+	.cacaoLine-Box h1 {
+		text-align: left;
+	}
+	.cacaoLine-Box span{
+		padding-bottom: 20px;
+	}
+	
 }
 
 @media screen and (max-width:615px) {
@@ -1060,6 +1083,11 @@ select, input, button, textarea {
 	.leftBox .content {
 	    margin: 11px 14% 23px 0;
 	}
+	
+	.cacaoLine-sub{
+		margin-top: -11px;
+	}
+	
 	
 } 
 @media screen and (max-width:536px) {

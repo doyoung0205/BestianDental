@@ -595,7 +595,7 @@ nav ul.theory li.root:hover > a.rootA{
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(6) {
-    padding-left: 27px;
+    padding-left: 0px;
 }
 
 /* 반응형 경계선  */
@@ -718,10 +718,6 @@ nav {
 	
 
 @media screen and (max-width:991px) {
-	
-	
-	
-	
 }
 
 

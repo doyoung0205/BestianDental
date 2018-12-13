@@ -10,51 +10,14 @@
 
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
-/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');*/
-      
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+          
 @font-face {
 /* 	font-family: 'mal';
 	src: url('/resources/fonts/malgun.eot');
 	src: url('/resources/fonts//malgun.woff') format('woff');
  */	
 }
-
-/* nanum-gothic-regular - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic'),
-       url('/fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-Regular.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* NanumGothic-Bold - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/NanumGothic-Bold.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic Bold'), local('NanumGothic-Bold'),
-       url('/fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-Bold.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* nanum-gothic-800 - korean_latin */
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/NanumGothic-ExtraBold.eot'); /* IE9 Compat Modes */
-  src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'),
-       url('/fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/NanumGothic-ExtraBold.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/NanumGothic-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-
-
-
 
 html, body {
 	margin: 0 auto;
@@ -341,6 +304,7 @@ nav div.userBehavior button:last-of-type {
 nav ul.theory {
 	margin: 0;
 	overflow: hidden;
+	width: 100%;
 	float: left;
 	padding: 0;
 	list-style: none;
@@ -355,7 +319,7 @@ nav  ul.theory li {
 	
 float:left;
 	
-/* min-width: 150px; */
+width: 160px;
 	
 text-align:center;
 }
@@ -391,7 +355,7 @@ nav  ul.theory li > a {
 	display: inline-block;
 	color: #1E243F;
 	text-align: left;
-	padding-left: 76px;
+	/* padding-left: 76px; */
 	text-decoration: none;
 	font-size: 13px;
 	font-weight: 500;
@@ -447,9 +411,9 @@ height: 75px;
 
 nav  ul.theory li.root div.uberSection , nav  ul.theory li.uber div.uberSection  {display: none;width:100% !important;padding:0;position: absolute;height: 240px;background-color: #FBFBFB;left: 0;box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);z-index: 99991;}
 
-.uberSection ul.uberMenu {/* width:750px; */width: 900px;/* position:absolute; */background: #FBFBFB;margin: 0 auto;/* float: left; */height: 280px;/* margin-left: 188px; */TEXT-ALIGN: CENTER;padding: 19px 0;}
+.uberSection ul.uberMenu {/* width:750px; */width: 960px;/* position:absolute; */background: #FBFBFB;margin: 0 auto;/* float: left; */height: 280px;/* margin-left: 188px; */TEXT-ALIGN: CENTER;padding: 19px 0;}
 
-.uberSection ul.uberMenu li.uberColumn {width: 130px;display: block;float: left;padding-left: 11px;}
+.uberSection ul.uberMenu li.uberColumn {width: 160px;display: block;float: left;/* padding-left: 11px; */}
 
 ul.uberMenu li.uberColumn ul {
 }
@@ -458,7 +422,9 @@ ul.uberMenu li.uberColumn ul > li {
 
 /* color: #1E243F; */
 
-/* min-width: 120px; */
+width: 160px;
+
+text-align: center;
 }
 
 ul.uberMenu li.uberColumn ul > li  > a {
@@ -469,7 +435,9 @@ font-size: 13px;
 
 font-family: "Nanum Gothic";
 
-padding: 3px 0;
+/* padding: 3px 0; */
+
+/* padding-left: 26px; */
 
 color: #1E243F;
 
@@ -579,23 +547,23 @@ nav ul.theory li.root:hover > a.rootA{
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(1) {
-    padding-left: 48px;
+    /* padding-left: 48px; */
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(2) {
-    padding-left: 25px;
+    /* padding-left: 25px; */
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(4) {
-    padding-left: 0px;
+    /* padding-left: 0px; */
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(5) {
-    padding-left: 1px;
+    /* padding-left: 1px; */
 }
 
 .uberSection ul.uberMenu li.uberColumn:nth-child(6) {
-    padding-left: 0px;
+    /* padding-left: 0px; */
 }
 
 /* 반응형 경계선  */
@@ -784,7 +752,7 @@ nav {
 
 .banner-container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 960px;
     height: 63px;
     position: relative;
 }

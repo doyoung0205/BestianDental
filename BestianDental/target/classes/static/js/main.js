@@ -80,7 +80,7 @@
         var menuGap = parseInt($gnbMenu.find("> a").css("paddingLeft"));
             
         $gnbMenu.on("mouseenter.hover focusin.hover", function(){
-            var gnbAccPos = $(this).offset().left - $(".banner-container").offset().left; 
+            var gnbAccPos = $(this).find("a").offset().left - $(".banner-container").offset().left; 
             var gnbWidth = $(this).find("a").width()*1;
             
             if( gnbAccPos === 0 ) {

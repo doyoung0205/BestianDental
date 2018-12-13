@@ -343,7 +343,7 @@
 		
 		var img = new Image();
 		
-		img.src = 'img/main2/clock.png';
+		img.src = '/img/main/carocel4/text.png';
 
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
@@ -352,11 +352,11 @@
 
 		// 'load' event
 		$(img).on('load', function() {
+			
 			TweenMax.to($(".visual_wrap"), 0, {opacity:1, display:"block",ease:es_step});			
 		    visualModule(0);
 		    mainVisual();
 			
-   			window.scrollTo(0, 0);
 		}); 
 
 		

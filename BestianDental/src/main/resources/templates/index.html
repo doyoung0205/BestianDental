@@ -340,12 +340,25 @@
  
 	$(function(){
 		  
+		
+		var img = new Image();
+		
+		img.src = 'resources/img/main/carocel4/text.png';
+
 			 textImgW = $(".visual_imgWrap.text").width();
 			 titleWidth = $(".visual_img.title.target").width();			
 			 subWidth = $(".visual_img.sub.target").width(); 	
-			visualModule(0);
-		    mainVisual();
-		     
+
+		// 'load' event
+		$(img).on('load', function() {
+			
+		     visualModule(0);
+		     mainVisual();
+			
+		}); 
+
+		
+
 	 });
 	  
 	 

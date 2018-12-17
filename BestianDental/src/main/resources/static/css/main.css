@@ -362,7 +362,7 @@ a:link, a:visited, a:active, a:hover {
 	border-left-width: 0;
 	position: absolute;
 	right: -19px;
-	top: 4px;
+	top: 8px;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
@@ -964,6 +964,15 @@ visual_wrap{
 	    min-height: 230px;
 	}
 	
+	.more_link{
+		font-size: 15px;
+	} 
+	.semiBox.after .semiTitle {
+	    margin-bottom: 12px;
+	}
+	.more_link:after{
+		top: 6px;
+	}
 }
 
 @media screen and (max-width:850px) {
@@ -1096,6 +1105,16 @@ visual_wrap{
 	.cacaoLine-sub{
 		margin-top: -11px;
 	}
+	.more_link{
+		font-size: 14px;
+	} 
+	.semiBox.after .semiTitle {
+	    margin-bottom: 14px;
+	}
+	.more_link:after{
+		width: 8px;
+	    height: 8px;		
+	}	
 	
 	
 } 

@@ -70,7 +70,7 @@ div:after {
     position: absolute;
     top: 927px;
     right: 5%;
-    z-index: 9999;
+    z-index: 23;
     box-shadow: 1px 2px 7px 0 #6d6363;
 }
   -moz-osx-font-smoothing: grayscale;
@@ -106,7 +106,7 @@ div:after {
 	color: #000;
 }
 
-.mainMenu h2 {
+.mainMenu h2,.mainMenu .text {
 	font-size: 22px;
 	/* font-weight: bold; */
 	letter-spacing: -0.4px;
@@ -143,10 +143,32 @@ h2.textRight {
 	float: right;
 }
 
-h2.textRight.days {
-	margin: 15px 0 0 30px;
+h2.textLeft {
+	text-align: left;
+	float: left;
 }
 
+h2.textRight.days {
+	margin: 15px 0 0 0px;
+}
+
+.halfText.third .text{
+    color: #fff;
+}
+
+.TextContent {
+    margin-top: 15px;
+    width: auto;
+    float: right;
+}
+
+.mainMenu .text{
+    font-size: 22px;
+    /* font-weight: bold; */
+    letter-spacing: -0.4px;
+    line-height: 40px;
+    color: #091931;
+}
 
 h2.halfCall {
     font-size: 35px;
@@ -184,6 +206,11 @@ h2.halfCall {
 .halfText.third:hover h2 {
 	color: #091931;
 }
+
+.halfText.third:hover .text{
+	color: #091931;
+}
+
 
 .halfText.third h2 {
 	color: #fff;
@@ -535,6 +562,9 @@ img.logo {
 	.mainMenu h2.bigText {
 		font-size: 25px;
 	}
+	.mainMenu .text {
+		font-size: 25px;
+	}
 	
 	.halfText {
 		padding: 20px;
@@ -543,7 +573,7 @@ img.logo {
 }
 
 @media screen and (max-width: 1149px) {
-	.mainMenu h2 {
+	.mainMenu h2 , .mainMenu .text{
 		font-size: 20px;
 	}
 	
@@ -569,7 +599,7 @@ img.logo {
 }
 
 @media screen and (min-width: 921px) {
-	.mainMenu h2 {
+	.mainMenu h2 , .mainMenu .text{
 		font-weight: bold;
 	}
 }
@@ -588,7 +618,7 @@ img.logo {
 	h2.textRight.top {
 		line-height: 35px;
 	}
-	.mainMenu h2 {
+	.mainMenu h2, .mainMenu .text {
 		-moz-text-stroke: 0.5px;
 		-webkit-text-stroke: 0.5px;
 	}
@@ -640,6 +670,10 @@ img.logo {
 	.menuText.first h2 {
 		margin-top: 0;
 	}
+	.mainMenu .text {
+    	font-size: 19px;	
+	    line-height: 27px;
+	}	
 	
 
 	
@@ -697,7 +731,11 @@ img.logo {
 }
 
 @media screen and (max-width: 810px) {
-	.mainMenu h2 {
+	.TextContent{
+		margin-top: 0px;
+	}
+
+	.mainMenu h2,.mainMenu .text {
 		font-size: 16px;
 		-moz-text-stroke: 0.5px;
 		-webkit-text-stroke: 0.5px;
@@ -767,12 +805,22 @@ img.logo {
 	    font-size: 20px;
 	    margin-top: 0;	
 	}
-	
+
+	.TextContent {
+		position: absolute;
+	    right: 20px;
+	    top: 50px;
+	    margin-top: 20px;
+	}
+		
+	.mainMenu .text{
+		font-size: 20px;
+	}
 	.halfText {
 		padding: 20px;
 	}
 	
-	.mainMenu h2 {
+	.mainMenu h2,mainMenu .text {
 		font-size: 20px;
 	}
 	
@@ -865,7 +913,7 @@ img.logo {
 		font-size: 15px;
 	}
 	
-	.mainMenu h2 {
+	.mainMenu h2,.mainMenu .text{
 		font-size: 16px;
 	}
 	

@@ -4,6 +4,10 @@ div:after {
 	display: block;
 }
 
+.contentBox h2 {
+    color: #091931;
+}
+
 .menuBox {
     width: 25%;
     height: 610px;

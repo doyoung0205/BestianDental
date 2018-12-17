@@ -339,7 +339,7 @@ a:link, a:visited, a:active, a:hover {
     right: -25px;
     border-color: #f45858;
 }
-.more_link{
+a.more_link{
 	display: inline-block;
 	margin: 0 30px 0 0;
 	float: right;

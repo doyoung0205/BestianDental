@@ -152,6 +152,10 @@ h2.textLeft {
 	float: left;
 }
 
+.TextContent .textRight {
+	text-align: right;
+}
+
 h2.textRight.days {
 	margin: 15px 0 0 0px;
 }
@@ -163,7 +167,7 @@ h2.textRight.days {
 .TextContent {
     margin-top: 15px;
     width: auto;
-    float: right;
+    float: left;
 }
 
 .mainMenu .text{
@@ -178,10 +182,17 @@ h2.halfCall {
     font-size: 35px;
     letter-spacing: 1.4px;
     font-weight: 550;
-    position: absolute;
+    /* position: absolute;
     bottom: 10%;
     right: 5%;
-    left: 8%;
+    left: 8%; */
+}
+
+h2.halfCall.bottom {
+	position: absolute;
+    bottom: 10%;
+    right: 5%;
+    left: 8%; 
 }
 
 .halfText.second {
@@ -223,9 +234,9 @@ h2.halfCall {
 .clockImg {
 	display: inline-block;
 	float: left;
-	position: absolute;
+	/* position: absolute;
     bottom: 12%;
-    left: 6%;
+    left: 6%; */
 }
 
 h2.textRight.top {
@@ -467,7 +478,7 @@ div.container.appear {
 	}
 	
 	.textRight.halfCall.time {
-		line-height: 30px;
+		line-height: 27px;
 	}
 	
 	.iconImg {
@@ -522,6 +533,19 @@ div.container.appear {
 		padding: 20px;
 	}
 	
+	.textLeft.days.month.text {
+		font-size: 22px;
+		line-height: 32px;
+	}
+	
+	.TextContent {
+		margin-top: 10px;
+	}
+	
+	.TextContent.bottom {
+		margin-top: 20px;
+	}
+	
 }
 
 @media screen and (max-width: 1149px) {
@@ -536,12 +560,26 @@ div.container.appear {
 	.mainMenu h2.bigText {
 		font-size: 23px;
 	}
+	
+	.textLeft.days.month.text {
+	    font-size: 19px;	
+	    letter-spacing: -1.2px;
+        line-height: 27px;
+	}
+	
+}
+
+@media screen and (max-width: 991px) {
+	.textLeft.days.month.text {
+		font-size: 17px;
+	}
 }
 
 @media screen and (min-width: 851px) and (max-width: 1050px){
 	.menuBox.second {
 		background-size: 280px 520px;
 	}
+	
 }
 
 @media screen and (max-width: 952px) {
@@ -599,7 +637,12 @@ div.container.appear {
 	}
 	
 	.halfText {
-		height: 200px;
+		height: 206px;
+		padding: 17px;
+	}
+	
+	.TextContent.bottom {
+	    margin-top: 10px;
 	}
 }
 
@@ -640,7 +683,11 @@ div.container.appear {
 	
 	.halfText {
 		height: 190px;
-		padding: 10px 20px 20px;
+		padding: 10px 10px 20px;
+	}
+	
+	.clockImg {
+		margin-top: 10px;
 	}
 	
 	.callImgBox {
@@ -684,13 +731,22 @@ div.container.appear {
 
 @media screen and (max-width: 810px) {
 	.TextContent{
-		margin-top: 0px;
+		margin-top: 5px;
 	}
 
 	.mainMenu h2,.mainMenu .text {
 		font-size: 16px;
 		-moz-text-stroke: 0.5px;
 		-webkit-text-stroke: 0.5px;
+	}
+	
+	.textRight.halfCall.time {
+	    line-height: 25px;	
+	}
+	
+	.textLeft.days.month.text {
+		font-size: 15px;
+		line-height: 22px;
 	}
 	
 	h2.bigText {
@@ -755,15 +811,28 @@ div.container.appear {
 	}
 
 	.TextContent {
-		position: absolute;
+		/* position: absolute;
 	    right: 20px;
 	    top: 50px;
-	    margin-top: 20px;
+	    margin-top: 20px; */
 	}
 		
 	.mainMenu .text{
 		font-size: 20px;
 	}
+	
+	.TextContent.bottom {
+		margin-top: 15px;
+	}
+	
+	.textLeft.days.month.text {
+		font-size: 17px;
+	}
+	
+	.clockImg {
+		margin-top: 0;
+	}
+	
 	.halfText {
 		padding: 20px;
 	}
@@ -809,6 +878,12 @@ div.container.appear {
 	
 }
 
+@media screen and (max-width: 680px) {
+	.TextContent.bottom {
+		margin-top: 7px;
+	}
+}
+
 @media screen and (min-width: 490px) and (max-width: 749px) {
 	.barBorder {
 		width: 30px;
@@ -825,9 +900,17 @@ div.container.appear {
 		font-size: 16px;
 	}
 	
+	.textLeft.days.month.text {
+		font-size: 15px;
+	}
+	
 	.halfText h2.halfCall {
 		font-size: 19px;
 		letter-spacing: 0.4;
+	}
+	
+	.textRight.halfCall.time {
+		
 	}
 	
 	.iconImg {
@@ -845,6 +928,10 @@ div.container.appear {
 	/* .mapImgBox {
 		bottom: 55px;
 	} */
+	
+	.clockImg {
+		margin-top: 5px;
+	}
 	
 	
 	
@@ -871,4 +958,12 @@ div.container.appear {
 	.iconImg {
 		width: 35px;
 	}	
+}
+
+@media screen and (max-width: 359px) {
+	.textLeft.days.month.text {
+		font-size: 13px;
+	}
+	
+	
 }

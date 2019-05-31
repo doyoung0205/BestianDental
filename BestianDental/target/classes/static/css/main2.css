@@ -70,7 +70,7 @@ div:after {
 
 .quick {
     width: 171px;
-    height: 278px;
+    height: 324px;
     position: absolute;
     top: 927px;
     right: 5%;
@@ -257,7 +257,7 @@ h2.textRight.top {
 }
 
 .smallBox.second {
-	height: 80px;
+	height: 60px;
     padding: 13px;
     background: #091931;
     cursor: pointer;
@@ -265,6 +265,26 @@ h2.textRight.top {
 
 .smallBox.second:hover {
 	background: #0f2b56;
+}
+
+.smallBox.fourth {
+	height: 60px;
+    padding: 13px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.smallBox.fourth:hover {
+    background: #f7f7f7;	
+}
+
+.smallBox.fourth .imageBox {
+	float: left;
+    margin: 0 5px 0 10px;
+}
+
+.smallBox.fourth h2 {
+	margin-top: 10px;
 }
 
 .smallBox {
@@ -292,7 +312,7 @@ h2.textRight.top {
 .smallBox.third {
 	padding: 13px;
 	background: #FFE600;
-	height: 80px;
+	height: 60px;
 	cursor: pointer;
 }
 
